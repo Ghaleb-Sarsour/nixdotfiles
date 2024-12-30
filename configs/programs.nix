@@ -19,7 +19,7 @@
     gnumake
     go
     greetd.tuigreet
-    hollywood
+    #hollywood
     htop
     hyprlock
     hyprshot
