@@ -5,6 +5,7 @@
   imports = [
     ./hmconfigs/sh.nix
     ./hmconfigs/neovim/neovim.nix
+    ./hmconfigs/hyprland/hyprland.nix
   ];
 
 
