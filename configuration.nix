@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./configs/programs.nix
     ];
 
  boot.kernelParams = [ "quiet" "loglevel=3"];
@@ -68,13 +69,6 @@
   
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     git
-     firefox
-     kitty
-  ];
-  programs.hyprland.enable = true;
   nix.settings.experimental-features = [ "nix-command" "flakes"];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
