@@ -4,6 +4,7 @@
 
   imports = [
     ./hmconfigs/sh.nix
+    ./hmconfigs/neovim/neovim.nix
   ];
 
 
