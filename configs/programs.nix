@@ -45,7 +45,7 @@
     python312Packages.pip
     rar
     ripgrep
-    rocmPackages_5.llvm.clang
+    #rocmPackages_5.llvm.clang
     root
     rofi-wayland
     ruby
