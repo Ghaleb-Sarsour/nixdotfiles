@@ -26,7 +26,7 @@
     inetutils
     ipfetch
     jdk
-    julia_19
+    #julia_19
     kitty
     libgcc
     linuxKernel.packages.linux_6_6.vmware
