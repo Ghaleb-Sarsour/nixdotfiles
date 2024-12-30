@@ -3,7 +3,7 @@
 {
 
   imports = [
-    ./hmconfigs/sh.nix
+    ./hmconfigs/shell/sh.nix
     ./hmconfigs/neovim/neovim.nix
     ./hmconfigs/hyprland/hyprland.nix
     ./hmconfigs/waybar/waybar.nix
