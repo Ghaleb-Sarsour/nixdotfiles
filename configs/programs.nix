@@ -60,7 +60,7 @@
     tmux
     tree-sitter
     typescript
-    unityhub
+    #unityhub
     unzip
     vistafonts
     vlc
