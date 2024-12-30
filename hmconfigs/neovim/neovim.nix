@@ -3,5 +3,5 @@
 {
 
   programs.neovim.enable = true;
-  home.file."./config/nvim/init.lua".path = ''./nconfig/init.lua'';
+  home.file."./config/nvim/init.lua".source = ''./nconfig/init.lua'';
 }
