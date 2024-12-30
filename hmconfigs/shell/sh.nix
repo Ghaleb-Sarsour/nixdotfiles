@@ -4,6 +4,8 @@ let
   aliases = {
     ll = "ls -l";
     ".." = "cd ..";
+    "hmapply" = "home-manager switch --flake .";
+    "flapply" = "sudo nixos-rebuild switch --flake .";
   };
 
 in

@@ -9,9 +9,10 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     #Ensure home-manager and nixpkgs are the same version
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    ghostty.url = "github:ghostty-org/ghostty"; 
   };
 
-  outputs = {self, nixpkgs, home-manager, nixos-hardware, ...}: 
+  outputs = {self, nixpkgs, home-manager, nixos-hardware, ghostty, ...}: 
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -26,6 +27,11 @@
  	    modules = [
           ./configuration.nix
           nixos-hardware.nixosModules.lenovo-thinkpad-e14-intel
+          {
+            environment.systemPackages = [
+              ghostty.packages.x86_64-linux.default
+            ];
+          }
         ];
         };
       };
@@ -37,7 +43,7 @@
  	  modules = [./home.nix];
       };
     };
-
+    
   };
 
 
