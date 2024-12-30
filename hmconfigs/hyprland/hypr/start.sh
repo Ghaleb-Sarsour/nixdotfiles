@@ -1,8 +1,6 @@
-#!/usr/bin/env bash
-
-swww init
-swww img ~/Downloads/palestine.jpg
-
+swww-daemon & sleep 0.1 && swww img ./flag.jpg &
 waybar &
 nextcloud &
-dunst
+swaynotificationcenter &
+blueman-applet
+
