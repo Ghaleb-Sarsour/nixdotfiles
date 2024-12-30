@@ -6,11 +6,12 @@
     #Grabbing Packages/Sources
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     #Ensure home-manager and nixpkgs are the same version
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {self, nixpkgs, home-manager, ...}: 
+  outputs = {self, nixpkgs, home-manager, nixos-hardware, ...}: 
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -22,7 +23,10 @@
       nixosConfigurations = {
         nixos = lib.nixosSystem {
           inherit system;
- 	  modules = [./configuration.nix];
+ 	    modules = [
+          ./configuration.nix
+          nixos-hardware.nixosModules.lenovo-thinkpad-e14-intel
+        ];
         };
       };
 
