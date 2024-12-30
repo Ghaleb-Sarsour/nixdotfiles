@@ -2,5 +2,5 @@
 
 
 {
-  #home.file.".config/hypr/".source = ./hypr;
+  home.file.".config/hypr/".source = ./hypr;
 }
