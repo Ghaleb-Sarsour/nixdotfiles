@@ -11,7 +11,6 @@
       ./hardware-configuration.nix
       ./configs/programs.nix
       ./configs/connectivity.nix
-      <nixos-hardware/lenovo/thinkpad/e14/intel>
     ];
   
   #Enable Flakes
