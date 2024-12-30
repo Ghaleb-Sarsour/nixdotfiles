@@ -12,7 +12,10 @@
     discord
     dotnetCorePackages.sdk_8_0_3xx
     fastfetch
+    fd
     firefox
+    fzf
+    gcc
     geckodriver
     git
     gnumake
@@ -38,6 +41,7 @@
     onlyoffice-bin
     openvpn3
     php
+    php81Packages.composer
     pnpm
     python3
     python312Packages.cmake

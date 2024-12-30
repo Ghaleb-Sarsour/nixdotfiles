@@ -7,17 +7,23 @@ return {
   config = function()
     -- import nvim-treesitter plugin
    local treesitter = require("nvim-treesitter.configs")
-
+   vim.api.nvim_set_hl(0, "@variable", { fg = "#00ff9c" })  -- Sets variable names to a specific color
     -- configure treesitter
     treesitter.setup({ -- enable syntax highlighting
       highlight = {
         enable = true,
+        custom_captures = {
+            ["variable"] = "TSVariable",
+            ["@variable"] = "TSVariable",
+        },
       },
       -- enable indentation
       indent = { enable = true },
       -- ensure these language parsers are installed
       ensure_installed = {
         "json",
+        "nix",
+        "c_sharp",
         "javascript",
         "typescript",
         "tsx",
@@ -36,6 +42,8 @@ return {
         "gitignore",
         "query",
         "vimdoc",
+        "rust",
+        "latex",
         "c",
         "java",
         "python",

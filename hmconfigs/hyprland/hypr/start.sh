@@ -6,4 +6,3 @@ swww img ~/Downloads/palestine.jpg
 waybar &
 nextcloud &
 dunst
-nm-applet &

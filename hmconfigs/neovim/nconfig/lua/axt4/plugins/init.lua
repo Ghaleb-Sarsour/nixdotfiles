@@ -6,5 +6,7 @@ return {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "windwp/nvim-ts-autotag",
+    "brianhuster/live-preview.nvim",
+    "itchyny/calendar.vim",
 }
 
