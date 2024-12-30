@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
   #Programs
   environment.systemPackages = with pkgs; [
     bluetuith
@@ -71,7 +70,17 @@
     zathura
     zip
   ];
+  
+  #Fonts
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
+  ];
 
+  #Zsh
+  environment.shells = with pkgs; [ zsh ];
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
   
   #Greeter
   services.greetd = {
@@ -93,7 +102,6 @@
     TTYVTDisallocate = true;
   };
 
-
   #Vmware
   virtualisation.vmware.host.enable = true;
 
@@ -102,5 +110,17 @@
     enable = true;
     xwayland.enable = true;
   };
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "IHD";
+    NIXOS_OZONE_WL = "1";
+  };
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
+ 
+  #Allow unfree programs
+  nixpkgs.config.allowUnfree = true;
 
 }

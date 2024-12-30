@@ -5,13 +5,61 @@
 { config, pkgs, ... }:
 
 {
+  #Import other config files
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./configs/programs.nix
+      ./configs/connectivity.nix
+      <nixos-hardware/lenovo/thinkpad/e14/intel>
     ];
+  
+  #Enable Flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes"];
 
- boot.kernelParams = [ "quiet" "loglevel=3"];
+  #NTFS Support
+  boot.supportedFilesystems = [ "ntfs" ];
+
+  #Disable error reports in tty
+  boot.kernelParams = [ "quiet" "loglevel=3"];
+
+  #Optimization
+  nix.optimise = {
+    automatic = true;
+  };
+  nix.settings.auto-optimise-store = true;
+  
+  #Garbage Collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
+  #Updates
+  system.autoUpgrade = {
+    enable = true;
+    allowReboot = false;
+  };
+  
+  #GPU Settings
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      intel-mesa-drivers #For Broadwell (2014) or newer processors. LIBVA_DRIVER_NAME-iHD
+    ];
+  };
+
+  #Sound
+  services.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -19,14 +67,6 @@
 
   boot.initrd.luks.devices."luks-8bf3a96c-aeee-4611-a317-4ac1e1fa9d82".device = "/dev/disk/by-uuid/8bf3a96c-aeee-4611-a317-4ac1e1fa9d82";
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -52,7 +92,7 @@
     variant = "";
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  #User Account
   users.users.ext4 = {
     isNormalUser = true;
     description = "ext4";
@@ -60,34 +100,8 @@
     packages = with pkgs; [];
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
-  environment.shells = with pkgs; [ zsh ];
-  users.defaultUserShell = pkgs.zsh;
-  programs.zsh.enable = true;
-  
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
