@@ -11,6 +11,7 @@
       ./hardware-configuration.nix
       ./configs/programs.nix
       ./configs/connectivity.nix
+      ./configs/battery.nix
     ];
   
   #Enable Flakes
