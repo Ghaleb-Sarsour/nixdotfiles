@@ -1,79 +1,86 @@
-{ config, pkgs, ghostty, ... }:
+{ config, pkgs, pkgs-stable, nixpkgs-stable, ... }:
 
 {
-  #Programs
-  environment.systemPackages = with pkgs; [
-    bluetuith
-    brightnessctl
-    cargo
-    chromium
-    corefonts
-    curl
-    discord
-    dotnetCorePackages.sdk_8_0_3xx
-    fastfetch
-    fd
-    firefox
-    fzf
-    gcc
-    geckodriver
-    git
-    gnumake
-    go
-    greetd.tuigreet
-    #hollywood
-    htop
-    hyprlock
-    hyprshot
-    inetutils
-    ipfetch
-    jdk
-    #julia_19
-    kitty
-    libgcc
-    linuxKernel.packages.linux_6_6.vmware
-    lua51Packages.lua
-    luajitPackages.luarocks-nix
-    nextcloud-client
-    neovim
-    nodejs_22
-    obs-studio
-    onlyoffice-bin
-    openvpn3
-    php
-    php81Packages.composer
-    pnpm
-    python3
-    python312Packages.cmake
-    python312Packages.pip
-    rar
-    ripgrep
-    #rocmPackages_5.llvm.clang
-    root
-    rofi-wayland
-    ruby
-    rust-analyzer
-    rustc
-    rustup
-    scrcpy
-    starship
-    steam-run
-    swaynotificationcenter
-    swww
-    tmux
-    tree-sitter
-    typescript
+  environment.systemPackages = 
+    #Unstable Programs
+    (with pkgs; [
+      bluetuith
+      brightnessctl
+      cargo
+      chromium
+      corefonts
+      curl
+      discord
+      dotnetCorePackages.sdk_8_0_3xx
+      fastfetch
+      fd
+      firefox
+      fzf
+      gcc
+      geckodriver
+      git
+      gnumake
+      go
+      greetd.tuigreet
+      htop
+      hyprlock
+      hyprshot
+      inetutils
+      ipfetch
+      jdk
+      #julia_19
+      kitty
+      libgcc
+      linuxKernel.packages.linux_6_6.vmware
+      lua51Packages.lua
+      luajitPackages.luarocks-nix
+      nextcloud-client
+      neovim
+      nodejs_22
+      obs-studio
+      onlyoffice-bin
+      openvpn3
+      php
+      php81Packages.composer
+      pnpm
+      python3
+      python312Packages.cmake
+      python312Packages.pip
+      qutebrowser
+      rar
+      ripgrep
+      #rocmPackages_5.llvm.clang
+      root
+      rofi-wayland
+      ruby
+      rust-analyzer
+      rustc
+      rustup
+      scrcpy
+      starship
+      steam-run
+      swaynotificationcenter
+      swww
+      tmux
+      tree-sitter
+      typescript
+      unzip
+      vistafonts
+      vlc
+      waybar
+      wget
+      wl-clipboard
+      yazi
+      zathura
+      zip
+  ])
+
+  ++
+  #Stable Packages
+  (with pkgs-stable; [
+    hollywood
     #unityhub
-    unzip
-    vistafonts
-    vlc
-    waybar
-    wget
-    wl-clipboard
-    yazi
-    zathura
-    zip
-  ];
+  ]);
   
   #Fonts
   fonts.packages = with pkgs; [
@@ -126,5 +133,4 @@
  
   #Allow unfree programs
   nixpkgs.config.allowUnfree = true;
-
 }

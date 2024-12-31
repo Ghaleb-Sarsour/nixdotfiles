@@ -5,18 +5,21 @@
   inputs = {
     #Grabbing Packages/Sources
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "nixpkgs/nixos-24.05";
     home-manager.url = "github:nix-community/home-manager/master";
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    #Ensure home-manager and nixpkgs are the same version
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    #Programs
     ghostty.url = "github:ghostty-org/ghostty"; 
   };
 
-  outputs = {self, nixpkgs, home-manager, nixos-hardware, ghostty, ...}: 
+  outputs = {self, nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, ghostty, ...}: 
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      pkgs-stable = nixpkgs-stable.legacyPackages.${system};
     in
     {
 
@@ -28,21 +31,30 @@
           ./configuration.nix
           nixos-hardware.nixosModules.lenovo-thinkpad-e14-intel
           {
+            #Programs
             environment.systemPackages = [
               ghostty.packages.x86_64-linux.default
             ];
           }
         ];
+
+        specialArgs = {
+          inherit pkgs-stable;
+        };
+
         };
       };
 
       #Home Manager Configurations
       homeConfigurations = {
-        ext4 = home-manager.lib.homeManagerConfiguration {
-	  inherit pkgs;
- 	  modules = [./home.nix];
+          ext4 = home-manager.lib.homeManagerConfiguration {
+	      inherit pkgs;
+ 	      modules = [./home.nix];
+          extraSpecialArgs = {
+            inherit nixpkgs-stable;  
+          };
+        };
       };
-    };
     
   };
 
