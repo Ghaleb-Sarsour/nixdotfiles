@@ -80,7 +80,7 @@
     hollywood
     julia_19
     rocmPackages_5.llvm.clang
-    unityhub
+    #unityhub
   ]);
   
   #Emacs Daemon
