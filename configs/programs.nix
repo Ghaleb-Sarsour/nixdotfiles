@@ -12,6 +12,7 @@
       curl
       discord
       dotnetCorePackages.sdk_8_0_3xx
+      emacs
       fastfetch
       fd
       firefox
@@ -28,7 +29,6 @@
       inetutils
       ipfetch
       jdk
-      #julia_19
       kitty
       libgcc
       linuxKernel.packages.linux_6_6.vmware
@@ -49,7 +49,6 @@
       qutebrowser
       rar
       ripgrep
-      #rocmPackages_5.llvm.clang
       root
       rofi-wayland
       ruby
@@ -79,9 +78,14 @@
   #Stable Packages
   (with pkgs-stable; [
     hollywood
-    #unityhub
+    julia_19
+    rocmPackages_5.llvm.clang
+    unityhub
   ]);
   
+  #Emacs Daemon
+  services.emacs.enable = true;
+
   #Fonts
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
