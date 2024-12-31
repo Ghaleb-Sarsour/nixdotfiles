@@ -78,8 +78,8 @@
   #Stable Packages
   (with pkgs-stable; [
     hollywood
-    julia_19
-    rocmPackages_5.llvm.clang
+    #julia_19
+    #rocmPackages_5.llvm.clang
     #unityhub
   ]);
   

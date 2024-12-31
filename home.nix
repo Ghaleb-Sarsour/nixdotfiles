@@ -5,6 +5,7 @@
   imports = [
     ./hmconfigs/shell/sh.nix
     ./hmconfigs/neovim/neovim.nix
+    ./hmconfigs/emacs/emacs.nix
     ./hmconfigs/hyprland/hyprland.nix
     ./hmconfigs/waybar/waybar.nix
     ./hmconfigs/rofi/rofi.nix
