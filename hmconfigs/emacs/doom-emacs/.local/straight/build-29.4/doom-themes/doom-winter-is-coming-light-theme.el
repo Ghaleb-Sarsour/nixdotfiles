@@ -1,0 +1,1 @@
+/home/ext4/doom-emacs/.local/straight/repos/themes/themes/doom-winter-is-coming-light-theme.el

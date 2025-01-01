@@ -1,0 +1,1 @@
+/home/ext4/doom-emacs/.local/straight/repos/evil-collection/modes/vdiff/evil-collection-vdiff.el

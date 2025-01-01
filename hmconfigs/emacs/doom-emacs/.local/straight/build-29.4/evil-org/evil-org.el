@@ -1,0 +1,1 @@
+/home/ext4/doom-emacs/.local/straight/repos/evil-org-mode/evil-org.el

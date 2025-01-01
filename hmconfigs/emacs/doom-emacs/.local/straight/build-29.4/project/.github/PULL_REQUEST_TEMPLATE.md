@@ -1,0 +1,1 @@
+/home/ext4/doom-emacs/.local/straight/repos/project/.github/PULL_REQUEST_TEMPLATE.md

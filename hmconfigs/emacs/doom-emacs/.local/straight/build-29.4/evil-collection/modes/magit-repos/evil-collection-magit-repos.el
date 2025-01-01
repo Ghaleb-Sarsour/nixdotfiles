@@ -1,0 +1,1 @@
+/home/ext4/doom-emacs/.local/straight/repos/evil-collection/modes/magit-repos/evil-collection-magit-repos.el

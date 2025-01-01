@@ -1,0 +1,1 @@
+/home/ext4/doom-emacs/.local/straight/repos/emacs-hide-mode-line/hide-mode-line.el

@@ -1,0 +1,1 @@
+/home/ext4/doom-emacs/.local/straight/repos/elisp-def/elisp-def.el

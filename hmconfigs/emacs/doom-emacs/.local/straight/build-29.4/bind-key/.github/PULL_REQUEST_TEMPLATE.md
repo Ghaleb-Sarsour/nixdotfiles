@@ -1,0 +1,1 @@
+/home/ext4/doom-emacs/.local/straight/repos/bind-key/.github/PULL_REQUEST_TEMPLATE.md
