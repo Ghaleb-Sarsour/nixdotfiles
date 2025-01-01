@@ -6,6 +6,7 @@
     (with pkgs; [
       bluetuith
       brightnessctl
+      busybox
       cargo
       chromium
       corefonts
@@ -18,6 +19,7 @@
       fastfetch
       fd
       firefox
+      freerdp
       fzf
       gcc
       geckodriver
@@ -33,9 +35,11 @@
       jdk
       kitty
       libgcc
+      libnotify
       linuxKernel.packages.linux_6_6.vmware
       lua51Packages.lua
       luajitPackages.luarocks-nix
+      netcat-gnu
       nextcloud-client
       neovim
       nodejs_22
