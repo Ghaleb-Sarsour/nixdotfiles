@@ -8,6 +8,7 @@
     ./hmconfigs/hyprland/hyprland.nix
     ./hmconfigs/waybar/waybar.nix
     ./hmconfigs/rofi/rofi.nix
+    ./hmconfigs/dockerwinapps/winapps.nix
   ];
 
 

@@ -10,9 +10,11 @@
       chromium
       corefonts
       curl
+      dialog
       discord
+      docker
       dotnetCorePackages.sdk_8_0_3xx
-      emacs
+      #emacs
       fastfetch
       fd
       firefox
@@ -83,8 +85,11 @@
     #unityhub
   ]);
   
+  #Docker
+  virtualisation.docker.enable = true;
+
   #Emacs Daemon
-  services.emacs.enable = true;
+  services.emacs.enable = false;
 
   #Fonts
   fonts.packages = with pkgs; [

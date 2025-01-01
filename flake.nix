@@ -6,15 +6,23 @@
     #Grabbing Packages/Sources
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "nixpkgs/nixos-24.05";
-    home-manager.url = "github:nix-community/home-manager/master";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    winapps = {
+      url = "github:winapps-org/winapps";        
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    
     #Programs
     ghostty.url = "github:ghostty-org/ghostty"; 
   };
 
-  outputs = {self, nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, ghostty, ...}: 
+  outputs = {self, nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, ghostty, winapps, ...}: 
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -33,6 +41,8 @@
           {
             environment.systemPackages = [
               ghostty.packages.x86_64-linux.default
+              winapps.packages.${system}.winapps
+              winapps.packages.${system}.winapps-launcher
             ];
           }
         ];

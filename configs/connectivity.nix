@@ -20,9 +20,9 @@
   #Firewall
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 80 443 22 53 21 20 ];
+    allowedTCPPorts = [ 80 443 22 53 21 20 8006 3389 ];
     allowedTCPPortRanges = [];
-    allowedUDPPorts = [];
+    allowedUDPPorts = [ 3389 ];
     allowedUDPPortRanges = [];
   };
 
