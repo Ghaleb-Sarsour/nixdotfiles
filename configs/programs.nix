@@ -6,7 +6,6 @@
     (with pkgs; [
       bluetuith
       brightnessctl
-      busybox
       cargo
       chromium
       corefonts
@@ -19,7 +18,7 @@
       fastfetch
       fd
       firefox
-      freerdp
+      freerdp3
       fzf
       gcc
       geckodriver
@@ -32,6 +31,7 @@
       hyprshot
       inetutils
       ipfetch
+      iproute2
       jdk
       kitty
       libgcc
