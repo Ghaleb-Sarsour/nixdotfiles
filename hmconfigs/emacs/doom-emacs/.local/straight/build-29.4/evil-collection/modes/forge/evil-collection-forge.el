@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/evil-collection/modes/forge/evil-collection-forge.el

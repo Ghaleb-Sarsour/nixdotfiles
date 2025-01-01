@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/themes/themes/doom-1337-theme.el

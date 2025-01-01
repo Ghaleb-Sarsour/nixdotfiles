@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/consult-yasnippet/consult-yasnippet.el

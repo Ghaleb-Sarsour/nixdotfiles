@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/dirvish/extensions/dirvish-history.el

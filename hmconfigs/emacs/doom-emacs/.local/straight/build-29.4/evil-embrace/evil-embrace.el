@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/evil-embrace.el/evil-embrace.el

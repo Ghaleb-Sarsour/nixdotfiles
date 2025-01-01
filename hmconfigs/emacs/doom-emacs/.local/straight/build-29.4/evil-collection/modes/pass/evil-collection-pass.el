@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/evil-collection/modes/pass/evil-collection-pass.el

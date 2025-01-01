@@ -10,10 +10,11 @@ let
 
 in
 {
- 
+
   programs.zsh = {
     enable = true;
     shellAliases = aliases;
+    initExtra = "export PATH=$PATH:$HOME/.emacs.d/bin";
   };
 
    programs.bash = {

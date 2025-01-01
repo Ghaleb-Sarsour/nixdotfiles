@@ -31,7 +31,6 @@
           ./configuration.nix
           nixos-hardware.nixosModules.lenovo-thinkpad-e14-intel
           {
-            #Programs
             environment.systemPackages = [
               ghostty.packages.x86_64-linux.default
             ];
@@ -49,7 +48,9 @@
       homeConfigurations = {
           ext4 = home-manager.lib.homeManagerConfiguration {
 	      inherit pkgs;
- 	      modules = [./home.nix];
+ 	      modules = [
+            ./home.nix
+          ];
           extraSpecialArgs = {
             inherit nixpkgs-stable;  
           };

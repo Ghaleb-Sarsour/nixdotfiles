@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/emacs-which-key/which-key.el

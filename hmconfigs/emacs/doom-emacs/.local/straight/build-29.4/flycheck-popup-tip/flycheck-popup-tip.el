@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/flycheck-popup-tip/flycheck-popup-tip.el

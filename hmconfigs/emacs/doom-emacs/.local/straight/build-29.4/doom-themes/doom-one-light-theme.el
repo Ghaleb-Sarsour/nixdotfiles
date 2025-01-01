@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/themes/themes/doom-one-light-theme.el

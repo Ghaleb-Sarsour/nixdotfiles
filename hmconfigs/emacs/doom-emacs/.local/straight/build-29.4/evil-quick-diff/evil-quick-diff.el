@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/evil-quick-diff/evil-quick-diff.el

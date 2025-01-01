@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/seq/seq-24.el

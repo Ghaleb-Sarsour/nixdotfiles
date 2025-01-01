@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/vundo/.github/PULL_REQUEST_TEMPLATE.md

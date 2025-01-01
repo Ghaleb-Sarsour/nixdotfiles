@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/diff-hl/diff-hl-inline-popup.el

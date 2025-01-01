@@ -1,1 +1,0 @@
-/home/ext4/doom-emacs/.local/straight/repos/corfu/extensions/corfu-indexed.el
