@@ -10,15 +10,11 @@
       chromium
       corefonts
       curl
-      dialog
       discord
-      docker
       dotnetCorePackages.sdk_8_0_3xx
-      #emacs
       fastfetch
       fd
       firefox
-      freerdp3
       fzf
       gcc
       geckodriver
@@ -31,16 +27,14 @@
       hyprshot
       inetutils
       ipfetch
-      iproute2
       jdk
       kitty
       libgcc
-      libnotify
       linuxKernel.packages.linux_6_6.vmware
       lua51Packages.lua
       luajitPackages.luarocks-nix
-      netcat-gnu
       nextcloud-client
+      neovide
       neovim
       nodejs_22
       obs-studio
@@ -89,12 +83,6 @@
     #unityhub
   ]);
   
-  #Docker
-  virtualisation.docker.enable = true;
-
-  #Emacs Daemon
-  services.emacs.enable = false;
-
   #Fonts
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
