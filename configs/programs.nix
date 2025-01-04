@@ -26,13 +26,16 @@
       hyprlock
       hyprshot
       inetutils
+      imagemagick
       ipfetch
       jdk
       kitty
       libgcc
+      librsvg
       linuxKernel.packages.linux_6_6.vmware
       lua51Packages.lua
       luajitPackages.luarocks-nix
+      luajitPackages.magick
       nextcloud-client
       neovide
       neovim
@@ -60,6 +63,7 @@
       steam-run
       swaynotificationcenter
       swww
+      texliveMedium
       tmux
       tree-sitter
       typescript
