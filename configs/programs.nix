@@ -12,6 +12,7 @@
       curl
       discord
       dotnetCorePackages.sdk_8_0_3xx
+      emacs
       fastfetch
       fd
       firefox
@@ -86,7 +87,10 @@
     #rocmPackages_5.llvm.clang
     #unityhub
   ]);
-  
+ 
+  #Emacs
+  services.emacs.enable = true;
+
   #Fonts
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
