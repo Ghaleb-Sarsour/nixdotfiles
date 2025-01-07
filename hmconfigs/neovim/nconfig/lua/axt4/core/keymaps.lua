@@ -39,8 +39,6 @@ if vim.g.neovide then
   keymap.set('c', '<leader>nv', '<C-R>+', { desc = "Neovide paste" })
   keymap.set('i', '<leader>nv', '<C-R>+', { desc = "Neovide paste" }) 
 
-  keymap.set('n', '<leader>p', function() require("nabla").popup() end, { desc = "Open Nabla popup" })
-
 
 end
 

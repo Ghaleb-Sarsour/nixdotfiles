@@ -12,7 +12,6 @@
       curl
       discord
       dotnetCorePackages.sdk_8_0_3xx
-      emacs
       fastfetch
       fd
       firefox
@@ -23,6 +22,7 @@
       gnumake
       go
       greetd.tuigreet
+      helix
       htop
       hyprlock
       hyprshot
