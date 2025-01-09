@@ -30,6 +30,7 @@
       inetutils
       imagemagick
       ipfetch
+      java
       kitty
       libgcc
       librsvg
