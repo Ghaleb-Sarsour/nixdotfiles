@@ -39,3 +39,16 @@ opt.splitbelow = true
 
 --Swapfile
 opt.swapfile = false
+
+--Neovide Specific Settings
+if vim.g.neovide then
+  vim.o.guifont = "FiraCode Nerd Font:h20" -- text below applies for VimScript
+  vim.g.neovide_transparency = 0.95
+  vim.g.neovide_normal_opacity = 1
+  vim.g.neovide_refresh_rate = 60
+  vim.g.neovide_cursor_trail_size = 0.5
+end
+
+
+
+

@@ -7,6 +7,7 @@
       bluetuith
       brightnessctl
       cargo
+      checkstyle
       chromium
       corefonts
       curl
@@ -29,7 +30,6 @@
       inetutils
       imagemagick
       ipfetch
-      jdk
       kitty
       libgcc
       librsvg
@@ -62,6 +62,7 @@
       scrcpy
       starship
       steam-run
+      steam-fhsenv-without-steam
       swaynotificationcenter
       swww
       texliveMedium

@@ -27,17 +27,16 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 
 --Terminal Exit
 keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.api.nvim_set_keymap('i', '<Space>', '<Space>', { noremap = true, silent = true })
 
 --Neovide Copy/Paste
 if vim.g.neovide then
   keymap.set('n', '<leader>nm', ':w<CR>', { desc = "Neovide save" })
   keymap.set('v', '<leader>nb', '"+y', { desc = "Neovide copy" }) 
   keymap.set('n', '<leader>nb', '"+y', { desc = "Neovide copy" }) 
-  keymap.set('i', '<leader>nb', '"+y', { desc = "Neovide copy" }) 
   keymap.set('n', '<leader>nv', '"+P', { desc = "Neovide paste" })    
   keymap.set('v', '<leader>nv', '"+P', { desc = "Neovide paste" })   
   keymap.set('c', '<leader>nv', '<C-R>+', { desc = "Neovide paste" })
-  keymap.set('i', '<leader>nv', '<C-R>+', { desc = "Neovide paste" }) 
 
 
 end
