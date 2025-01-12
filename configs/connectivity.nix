@@ -12,10 +12,10 @@
   };
   services.dnsmasq = {
     enable = true;
-    settings.bind-interfaces = true;
+    settings.bind-interfaces = true; 
   };
   networking.resolvconf.useLocalResolver = true;
-  networking.nameservers = ["1.1.1.1"];
+  networking.nameservers = ["9.9.9.9"];
 
   #Firewall
   networking.firewall = {

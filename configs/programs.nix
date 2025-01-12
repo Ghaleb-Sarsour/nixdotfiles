@@ -25,6 +25,7 @@
       greetd.tuigreet
       helix
       htop
+      hyprcursor
       hyprlock
       hyprshot
       inetutils
@@ -70,6 +71,7 @@
       tmux
       tree-sitter
       typescript
+      unityhub
       unzip
       vistafonts
       vlc
