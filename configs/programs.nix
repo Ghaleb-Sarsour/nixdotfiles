@@ -12,6 +12,7 @@
       corefonts
       curl
       discord
+      dmidecode 
       dotnetCorePackages.sdk_8_0_3xx
       fastfetch
       fd
@@ -20,6 +21,7 @@
       gcc
       geckodriver
       git
+      glib
       gnumake
       go
       greetd.tuigreet
@@ -39,6 +41,7 @@
       lua51Packages.lua
       luajitPackages.luarocks-nix
       luajitPackages.magick
+      mono
       nextcloud-client
       neovide
       neovim
@@ -75,6 +78,7 @@
       unzip
       vistafonts
       vlc
+      vscode
       waybar
       wget
       wl-clipboard

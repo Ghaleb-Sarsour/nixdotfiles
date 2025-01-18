@@ -13,7 +13,7 @@ return {
       -- NEW: Configure diagnostic display
       vim.diagnostic.config({
         virtual_text = {
-          prefix = "",
+          prefix = "",
           source = true,  -- Show source in virtual text
         },
         float = {

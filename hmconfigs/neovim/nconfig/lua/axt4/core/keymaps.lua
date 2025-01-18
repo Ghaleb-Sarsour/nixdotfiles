@@ -31,13 +31,13 @@ vim.api.nvim_set_keymap('i', '<Space>', '<Space>', { noremap = true, silent = tr
 
 --Neovide Copy/Paste
 if vim.g.neovide then
-  keymap.set('n', '<leader>nm', ':w<CR>', { desc = "Neovide save" })
-  keymap.set('v', '<leader>nb', '"+y', { desc = "Neovide copy" }) 
-  keymap.set('n', '<leader>nb', '"+y', { desc = "Neovide copy" }) 
-  keymap.set('n', '<leader>nv', '"+P', { desc = "Neovide paste" })    
-  keymap.set('v', '<leader>nv', '"+P', { desc = "Neovide paste" })   
-  keymap.set('c', '<leader>nv', '<C-R>+', { desc = "Neovide paste" })
+  keymap.set({'v', 'n'}, '<leader>nb', '"+y', { desc = "Neovide copy" }) 
+  keymap.set({'n', 'v', 'c'}, '<leader>nv', '"+P', { desc = "Neovide paste" })    
 
+-- Neovide Text Sizes
+  keymap.set({ "n", "v" }, "<C-=>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>", {desc = "Neovide increase font size"})
+  keymap.set({ "n", "v" }, "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>,", {desc = "Neovide decrease font size"})
+  keymap.set({ "n" , "v" }, "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>", {desc = "Neovide font default size"})
 
 end
 

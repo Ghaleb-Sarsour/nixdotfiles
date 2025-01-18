@@ -7,7 +7,7 @@
 {
   #Import other config files
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
       ./configs/programs.nix
       ./configs/connectivity.nix
