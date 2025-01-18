@@ -13,7 +13,7 @@
       curl
       discord
       dmidecode 
-      dotnetCorePackages.sdk_8_0_3xx
+      dotnetCorePackages.dotnet_9.sdk
       fastfetch
       fd
       firefox
