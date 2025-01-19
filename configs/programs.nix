@@ -57,6 +57,7 @@
       python312Packages.pip
       qutebrowser
       rar
+      redshift
       ripgrep
       root
       rofi-wayland
