@@ -43,9 +43,11 @@
       luajitPackages.luarocks-nix
       luajitPackages.magick
       mono
-      nextcloud-client
       neovide
       neovim
+      networkmanager-openvpn
+      networkmanagerapplet
+      nextcloud-client
       nodejs_22
       obs-studio
       onlyoffice-bin
