@@ -58,6 +58,7 @@
       python3
       python312Packages.cmake
       python312Packages.pip
+      python313Packages.adblock
       qutebrowser
       rar
       ripgrep
@@ -132,6 +133,9 @@
     TTYVHangup = true;
     TTYVTDisallocate = true;
   };
+
+  #VPN
+  programs.openvpn3.enable = true;
 
   #Vmware
   virtualisation.vmware.host.enable = true;

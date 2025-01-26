@@ -12,7 +12,6 @@ opt.shiftwidth = 4
 opt.expandtab = true 
 opt.autoindent = true
 
-
 --Wrapping
 opt.wrap = false
 

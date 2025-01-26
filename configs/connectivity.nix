@@ -8,15 +8,15 @@
   #Networking
   networking.networkmanager = {
     enable = true;
-    dns = "dnsmasq";
+    # dns = "dnsmasq";
   };
-  services.dnsmasq = {
-    enable = true;
-    settings.bind-interfaces = true; 
-  };
-  networking.resolvconf.useLocalResolver = true;
-  networking.nameservers = ["9.9.9.9"];
-
+  # services.dnsmasq = {
+  #   enable = true;
+  #   settings.bind-interfaces = true; 
+  # };
+  # networking.resolvconf.useLocalResolver = true;
+  # networking.nameservers = ["9.9.9.9"];
+  #
   #Firewall
   networking.firewall = {
     enable = true;
@@ -40,7 +40,7 @@
     nssmdns4 = true;
     openFirewall = true;
   };
-
+    
 }
   
   
