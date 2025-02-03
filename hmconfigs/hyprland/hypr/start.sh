@@ -4,4 +4,5 @@ nextcloud &
 swaync &
 swaynotificationcenter &
 blueman-applet &
-discord 
+discord &
+xhost si:localuser:root        

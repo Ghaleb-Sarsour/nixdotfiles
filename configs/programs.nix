@@ -80,12 +80,14 @@
       typescript
       unityhub
       unzip
+      valent
       vistafonts
       vlc
       vscode
       waybar
       wget
       wl-clipboard
+      xorg.xhost
       yazi
       zathura
       zip
