@@ -48,6 +48,7 @@
       networkmanager-openvpn
       networkmanagerapplet
       nextcloud-client
+      nh
       nodejs_22
       obs-studio
       onlyoffice-bin
