@@ -7,6 +7,5 @@ return {
     "windwp/nvim-ts-autotag",
     "brianhuster/live-preview.nvim",
     "itchyny/calendar.vim",
-    "dhruvasagar/vim-table-mode",
 }
 

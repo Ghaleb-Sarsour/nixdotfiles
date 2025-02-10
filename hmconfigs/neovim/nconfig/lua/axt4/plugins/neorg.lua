@@ -10,6 +10,7 @@ return {
         ["core.integrations.treesitter"] = {},
         ["core.neorgcmd"] = {},
         ["core.defaults"] = {},
+        ["core.export"] = {},
         ["core.concealer"] = {
           config = {
             icon_preset = "varied",
