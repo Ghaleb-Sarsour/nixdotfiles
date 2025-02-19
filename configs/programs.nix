@@ -5,6 +5,10 @@
     #Unstable Programs
     (with pkgs; [
       bluetuith
+
+      gptfdisk
+      gparted
+
       brightnessctl
       cargo
       checkstyle
@@ -103,8 +107,7 @@
     #unityhub
   ]);
  
-  #Emacs
-  services.emacs.enable = true;
+  services.flatpak.enable = true;
 
   #Fonts
   fonts.packages = with pkgs; [

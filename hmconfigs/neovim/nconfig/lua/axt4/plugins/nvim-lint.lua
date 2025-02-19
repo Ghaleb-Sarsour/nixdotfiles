@@ -11,7 +11,7 @@ return {
         args = {
           "-jar",
           -- Update this path to where you store checkstyle jar
-          vim.fn.expand("~/.dotfiles/hmconfigs/neovim/nconfig/lua/axt4/plugins/linters/checkstyle-10.21.1-all.jar"),
+          vim.fn.expand("~/.dotfiles/hmconfigs/neovim/nconfig/lua/axt4/plugins/linters/checkstyle-10.21.2-all.jar"),
           "-c",
           -- Update this path to your custom checkstyle ruleset
           vim.fn.expand("~/.dotfiles/hmconfigs/neovim/nconfig/lua/axt4/plugins/linters/cs1331.xml"),
@@ -57,3 +57,5 @@ return {
     end,
   }
 }
+
+

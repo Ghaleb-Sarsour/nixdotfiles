@@ -27,8 +27,8 @@
         nixos = lib.nixosSystem {
           inherit system;
  	    modules = [
-          ./configuration.nix
-          nixos-hardware.nixosModules.lenovo-thinkpad-e14-intel
+        ./configuration.nix
+        nixos-hardware.nixosModules.lenovo-thinkpad-e14-intel
       ];
 
         specialArgs = {
