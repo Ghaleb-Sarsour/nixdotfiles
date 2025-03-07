@@ -5,10 +5,7 @@
     #Unstable Programs
     (with pkgs; [
       bluetuith
-
-      gptfdisk
       gparted
-
       brightnessctl
       cargo
       checkstyle
@@ -60,10 +57,9 @@
       php
       php81Packages.composer
       pnpm
-      python3
-      python312Packages.cmake
-      python312Packages.pip
-      python313Packages.adblock
+      python311
+      python311Packages.cmake
+      python311Packages.pip
       qutebrowser
       rar
       ripgrep
