@@ -22,6 +22,7 @@
       gcc
       geckodriver
       git
+      git-lfs
       glib
       gnumake
       go
