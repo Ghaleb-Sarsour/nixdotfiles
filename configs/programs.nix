@@ -12,6 +12,7 @@
       chromium
       corefonts
       curl
+      davinci-resolve
       discord
       dmidecode 
       dotnetCorePackages.dotnet_9.sdk
