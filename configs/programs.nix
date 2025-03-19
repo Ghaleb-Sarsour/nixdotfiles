@@ -5,7 +5,6 @@
     #Unstable Programs
     (with pkgs; [
       bluetuith
-      gparted
       brightnessctl
       cargo
       checkstyle
@@ -18,6 +17,7 @@
       dotnetCorePackages.dotnet_9.sdk
       fastfetch
       fd
+      ffmpeg
       firefox
       fzf
       gcc
@@ -27,6 +27,7 @@
       glib
       gnumake
       go
+      gparted
       greetd.tuigreet
       helix
       htop
@@ -56,6 +57,7 @@
       obs-studio
       onlyoffice-bin
       openvpn3
+      pavucontrol
       php
       php81Packages.composer
       pnpm
