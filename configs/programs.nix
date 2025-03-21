@@ -91,6 +91,7 @@
       vlc
       vscode
       waybar
+      wezterm
       wget
       wl-clipboard
       xorg.xhost
