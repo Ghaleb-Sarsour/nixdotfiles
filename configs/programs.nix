@@ -61,9 +61,9 @@
       php
       php81Packages.composer
       pnpm
-      python311
-      python311Packages.cmake
-      python311Packages.pip
+      python312
+      python312Packages.cmake
+      python312Packages.pip
       qutebrowser
       rar
       ripgrep
@@ -86,6 +86,7 @@
       unityhub
       unzip
       valent
+      vimiv-qt
       vistafonts
       vlc
       vscode
@@ -113,6 +114,8 @@
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
     nerd-fonts.droid-sans-mono
+    corefonts
+    vistafonts
   ];
 
   #Zsh
