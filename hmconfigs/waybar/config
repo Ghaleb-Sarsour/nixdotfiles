@@ -42,9 +42,9 @@
     },
     "wireplumber": {
         "format": "{icon} {volume}%",
-        "format-muted": " ",
+        "format-muted": "󰝟 ",
         "on-click": "pavucontrol",
-        "format-icons": ["  ", "  ", "  "]
+        "format-icons": ["󰕿 ", "󰖀 ", "󰕾  "]
     },
     "privacy": {
 	    "icon-spacing": 4,

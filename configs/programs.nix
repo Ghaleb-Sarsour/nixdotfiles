@@ -94,6 +94,7 @@
       wezterm
       wget
       wl-clipboard
+      xdg-desktop-portal
       xorg.xhost
       yazi
       zathura
