@@ -165,6 +165,8 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
+  #Btop
+  programs.btop.enable = true;
  
   #Allow unfree programs
   nixpkgs.config.allowUnfree = true;
