@@ -20,9 +20,51 @@ in
   programs.zsh = {
     enable = true;
     shellAliases = aliases;
+    initExtra = ''
+
+      # Start Starship
+      eval "$(starship init zsh)"
+
+      # History Keybinds
+      bindkey "''${key[Up]}" history-substring-search-up
+      bindkey "''${key[Down]}" history-substring-search-up
+    
+    
+    '';
+
+    plugins = [
+      { 
+        name = "zsh-autosuggestions"; 
+        src = pkgs.fetchFromGitHub {
+          owner = "zsh-users";
+          repo = "zsh-autosuggestions";
+          tag = "v0.7.1";
+          sha256 = "vpTyYq9ZgfgdDsWzjxVAE7FZH4MALMNZIFyEOBLm5Qo=";
+        };
+      }
+      { 
+        name = "zsh-history-substring-search";
+        src = pkgs.fetchFromGitHub {
+          owner = "zsh-users";
+          repo = "zsh-history-substring-search";
+          tag = "v1.1.0";
+          sha256 = "GSEvgvgWi1rrsgikTzDXokHTROoyPRlU0FVpAoEmXG4=";
+        };
+      }
+      {
+        name = "zsh-syntax-highlighting";
+        src = pkgs.fetchFromGitHub {
+          owner = "zsh-users";
+          repo = "zsh-syntax-highlighting";
+          tag = "0.8.0";
+          sha256 = "iJdWopZwHpSyYl5/FQXEW7gl/SrKaYDEtTH9cGP7iPo=";
+        };
+      }
+    ]; 
+
   };
 
-   programs.bash = {
+  programs.bash = {
     enable = true;
     shellAliases = aliases;
   };

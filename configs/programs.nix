@@ -6,6 +6,7 @@
     (with pkgs; [
       bluetuith
       brightnessctl
+      btop
       cargo
       checkstyle
       chromium
@@ -165,9 +166,6 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
-  #Btop
-  programs.btop.enable = true;
- 
   #Allow unfree programs
   nixpkgs.config.allowUnfree = true;
 }
