@@ -41,6 +41,7 @@
       ipfetch
       jdk
       kitty
+      lazygit
       libgcc
       librsvg
       linuxKernel.packages.linux_6_6.vmware
