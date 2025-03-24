@@ -22,6 +22,8 @@ in
     enable = true;
     shellAliases = aliases;
     initExtra = ''
+      #make nvim default editor
+      export EDITOR=nvim
 
       # Enable programs
       eval "$(starship init zsh)"

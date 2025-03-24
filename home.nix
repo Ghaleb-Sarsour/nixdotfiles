@@ -10,6 +10,7 @@
     ./hmconfigs/rofi/rofi.nix
     ./hmconfigs/wezterm/wezterm.nix
     ./hmconfigs/starship/starship.nix
+    ./hmconfigs/yazi/yazi.nix
   ];
 
 
