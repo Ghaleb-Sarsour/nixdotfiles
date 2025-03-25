@@ -39,8 +39,8 @@ keymap.set('n', '<leader>rc', ':RunClose<CR>', { noremap = true, silent = false,
 --keymap.set('n', '<leader>crp', ':CRProjects<CR>', { noremap = true, silent = false })
 
 -- Toggle Term:
-keymap.set('n', '<leader>lt', ':ToggleTerm direction=float name=', {noremap = true, silent = false; desc = "Open new floating terminal"})
-keymap.set('n', '<leader>ll', ':TermSelect<CR>', {noremap = true, silent = false, desc = "Select open terminal"})
+keymap.set('n', '<leader>rt', ':ToggleTerm direction=float name=', {noremap = true, silent = false; desc = "Open new floating terminal"})
+keymap.set('n', '<leader>rl', ':TermSelect<CR>', {noremap = true, silent = false, desc = "Select open terminal"})
 
 --Neovide Copy/Paste
 if vim.g.neovide then
