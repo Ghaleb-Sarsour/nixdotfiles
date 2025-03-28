@@ -6,6 +6,9 @@ local opt = vim.opt
 opt.number = true
 --opt.relativenumber = true
 
+--Spelling
+opt.spell = true
+opt.spelllang = { "en_us" }
 --Tabs
 opt.tabstop = 2
 opt.shiftwidth = 2
