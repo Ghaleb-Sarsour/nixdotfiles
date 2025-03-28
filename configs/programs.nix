@@ -12,7 +12,6 @@
       chromium
       corefonts
       curl
-      davinci-resolve
       discord
       dmidecode 
       dotnetCorePackages.dotnet_9.sdk
@@ -108,6 +107,7 @@
   #Stable Packages
   (with pkgs-stable; [
     hollywood
+    # davinci-resolve
     #julia_19
     #rocmPackages_5.llvm.clang
     #unityhub
@@ -152,7 +152,7 @@
   programs.openvpn3.enable = true;
 
   #Vmware
-  virtualisation.vmware.host.enable = true;
+  # virtualisation.vmware.host.enable = true;
 
   #Hyprland
   programs.hyprland = {
