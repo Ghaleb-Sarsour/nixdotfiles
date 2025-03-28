@@ -1,4 +1,4 @@
-swww-daemon & sleep 0.1 && swww img ./flag.jpg &
+swww-daemon & sleep 0.1 && swww img ./wallpaper.png &
 waybar &
 nextcloud &
 swaync &

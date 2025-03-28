@@ -36,11 +36,12 @@
       hyprlock
       hyprshade
       hyprshot
+      hyprsunset
       inetutils
       imagemagick
       ipfetch
       jdk
-      kitty
+      # kitty
       lazygit
       libgcc
       librsvg
