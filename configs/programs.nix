@@ -107,10 +107,6 @@
   #Stable Packages
   (with pkgs-stable; [
     hollywood
-    # davinci-resolve
-    #julia_19
-    #rocmPackages_5.llvm.clang
-    #unityhub
   ]);
  
   services.flatpak.enable = true;
@@ -147,6 +143,9 @@
     TTYVHangup = true;
     TTYVTDisallocate = true;
   };
+
+  #keyring 
+  services.gnome.gnome-keyring.enable = true;
 
   #VPN
   programs.openvpn3.enable = true;
