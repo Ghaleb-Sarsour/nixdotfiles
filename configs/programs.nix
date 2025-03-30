@@ -79,6 +79,7 @@
       starship
       steam-run
       steam-fhsenv-without-steam
+      sqlite
       swaynotificationcenter
       swww
       texliveMedium
@@ -96,6 +97,7 @@
       wezterm
       wget
       wl-clipboard
+      wn
       xdg-desktop-portal
       xorg.xhost
       yazi
