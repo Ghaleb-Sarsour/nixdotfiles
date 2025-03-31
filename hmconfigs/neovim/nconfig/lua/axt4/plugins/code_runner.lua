@@ -13,8 +13,7 @@ return {
         typescript = "deno run",
         rust = {
           "cd $dir &&",
-          "rustc $fileName &&",
-          "$dir/$fileNameWithoutExt"
+          "cargo run"
         },
         c = function(...)
           c_base = {

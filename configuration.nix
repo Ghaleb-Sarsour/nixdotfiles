@@ -25,9 +25,9 @@
 
   #Optimization
   nix.optimise = {
-    automatic = true;
+    automatic = true; # Optimize timer-based
   };
-  nix.settings.auto-optimise-store = true;
+  nix.settings.auto-optimise-store = true; # Optimize during every rebuild
   
   #Garbage Collection
   nix.gc = {

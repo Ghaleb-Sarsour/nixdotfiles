@@ -109,6 +109,7 @@
   #Stable Packages
   (with pkgs-stable; [
     hollywood
+    # davinci-resolve
   ]);
  
   services.flatpak.enable = true;

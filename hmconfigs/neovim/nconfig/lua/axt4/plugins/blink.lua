@@ -3,7 +3,6 @@ return {
   -- optional: provides snippets for the snippet source
   dependencies = {
     'rafamadriz/friendly-snippets',
-    'Kaiser-Yang/blink-cmp-dictionary',
     'ribru17/blink-cmp-spell'
   },
 
@@ -29,7 +28,7 @@ return {
     -- C-k: Toggle signature help (if signature.enabled = true)
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
-    keymap = { preset = 'enter' },
+    keymap = { preset = 'default' },
 
     appearance = {
       -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
@@ -45,24 +44,13 @@ return {
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer', 'dictionary' , 'spell'},
+      default = { 'lsp', 'path', 'snippets', 'buffer', 'spell'},
       providers = {
         spell = {
           name = 'Spell',
           module = 'blink-cmp-spell',
           opts = {}
         },
-        dictionary = {
-          module = 'blink-cmp-dictionary',
-          name = 'Dict',
-          min_keyword_length = 3,
-          opts = {
-            -- Path should be specified as a table even for single directory
-            dictionary_directories = {  -- Changed to table format
-              '~/.dotfiles/hmconfigs/neovim/nconfig/lua/axt4/plugins/dictionaries/'
-            },
-          }
-        }
       }
     },
 

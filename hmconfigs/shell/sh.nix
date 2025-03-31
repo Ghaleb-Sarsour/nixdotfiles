@@ -4,8 +4,6 @@ let
   aliases = {
     ll = "ls -l";
     ".." = "cd ..";
-    # "hmapply" = "home-manager switch --flake .";
-    # "flapply" = "sudo nixos-rebuild switch --flake .";
     "hmapply" = "nh home switch ~/.dotfiles/";
     "flapply" = "nix flake update --flake ~/.dotfiles/ && nh os switch ~/.dotfiles/";
     "flupdate" = "nix flake update --flake ~/.dotfiles/ && nh os switch --update ~/.dotfiles/";

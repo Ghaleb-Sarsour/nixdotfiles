@@ -5,7 +5,7 @@
   inputs = {
     #Grabbing Packages/Sources
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "nixpkgs/nixos-24.05";
+    nixpkgs-stable.url = "nixpkgs/nixos-24.11";
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,7 +18,7 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      pkgs-stable = nixpkgs-stable.legacyPackages.${system};
+      pkgs-stable = import nixpkgs-stable { inherit system; config.allowUnfree = true;};
     in
     {
 
@@ -52,7 +52,5 @@
       };
     
   };
-
-
 
 }
