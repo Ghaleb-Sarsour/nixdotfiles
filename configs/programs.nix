@@ -97,7 +97,7 @@
       wezterm
       wget
       wl-clipboard
-      wn
+      wordnet
       xdg-desktop-portal
       xorg.xhost
       yazi
