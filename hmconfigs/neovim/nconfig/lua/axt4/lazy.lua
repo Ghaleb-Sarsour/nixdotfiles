@@ -18,7 +18,7 @@ require('lazy').setup('axt4.plugins', {
   },
     {'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'},
     {'neovim/nvim-lspconfig'},
-    {'hrsh7th/cmp-nvim-lsp'},
+    -- {'hrsh7th/cmp-nvim-lsp'},
 })
 
 local lsp_zero = require('lsp-zero')
@@ -42,7 +42,7 @@ end
 lsp_zero.extend_lspconfig({
   sign_text = true,
   lsp_attach = lsp_attach,
-  capabilities = require('cmp_nvim_lsp').default_capabilities(),
+  -- capabilities = require('cmp_nvim_lsp').default_capabilities(),
 })
 
 require('mason').setup({})
