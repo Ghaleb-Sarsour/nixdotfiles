@@ -7,5 +7,6 @@ return {
     "brianhuster/live-preview.nvim",
     "itchyny/calendar.vim",
     "ThePrimeagen/vim-be-good",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
 }
 

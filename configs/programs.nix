@@ -4,6 +4,17 @@
   environment.systemPackages = 
     #Unstable Programs
     (with pkgs; [
+
+      # LSP's for Neovim
+      jdt-language-server
+      rust-analyzer
+      nil
+      typescript-language-server
+      lua-language-server
+      python313Packages.python-lsp-server
+
+      android-file-transfer
+      android-tools
       bluetuith
       brightnessctl
       btop
@@ -58,20 +69,19 @@
       obs-studio
       onlyoffice-bin
       openvpn3
+      p7zip
       pavucontrol
       php
       php81Packages.composer
       pnpm
-      python312
-      python312Packages.cmake
-      python312Packages.pip
-      qutebrowser
+      python313
+      python313Packages.cmake
+      python313Packages.pip
       rar
       ripgrep
       root
       rofi-wayland
       ruby
-      rust-analyzer
       rustc
       rustup
       scrcpy
@@ -87,7 +97,6 @@
       typescript
       unityhub
       unzip
-      valent
       vimiv-qt
       vistafonts
       vlc
@@ -95,6 +104,7 @@
       waybar
       wezterm
       wget
+      wineWowPackages.stable
       wl-clipboard
       wordnet
       xdg-desktop-portal
@@ -151,9 +161,6 @@
 
   #VPN
   programs.openvpn3.enable = true;
-
-  #Vmware
-  # virtualisation.vmware.host.enable = true;
 
   #Hyprland
   programs.hyprland = {

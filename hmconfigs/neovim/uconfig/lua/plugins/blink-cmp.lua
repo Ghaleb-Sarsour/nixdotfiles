@@ -3,7 +3,6 @@ return {
   -- optional: provides snippets for the snippet source
   dependencies = {
     'rafamadriz/friendly-snippets',
-    -- 'ribru17/blink-cmp-spell'
   },
 
   -- use a release tag to download pre-built binaries
@@ -28,7 +27,11 @@ return {
     -- C-k: Toggle signature help (if signature.enabled = true)
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
-    keymap = { preset = 'default' },
+    keymap = {
+      preset = 'default',
+      ['<Down>'] = {},
+      ['<Up>'] = {},
+    },
 
     appearance = {
       -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
@@ -37,22 +40,15 @@ return {
     },
 
     -- (Default) Only show the documentation popup when manually triggered
-    completion = { documentation = { auto_show = false } },
+    completion = { documentation = { auto_show = true } },
     signature = { enabled = true },
-
 
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' }, --Add 'spell' to readd spell check
-      -- providers = {
-      --   spell = {
-      --     name = 'Spell',
-      --     module = 'blink-cmp-spell',
-      --     opts = {}
-      --   },
-      -- }
+      default = { 'lsp', 'path', 'snippets', 'buffer'  },
     },
+
 
     -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
     -- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
