@@ -102,7 +102,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     local client = vim.lsp.get_client_by_id(args.data.client_id)
 
     if client:supports_method('textDocument/inlayHint') then
-      vim.lsp.inlay_hint.enable(true, {bufnr = args.buf})
+      vim.lsp.inlay_hint.enable(false, {bufnr = args.buf})
     end
   end,
 })
@@ -148,6 +148,12 @@ vim.api.nvim_create_autocmd("LspProgress", {
     progress[client.id] = vim.tbl_filter(function(v)
       return table.insert(msg, v.msg) or not v.done
     end, p)
+
+    -- Check if current mode is insert before showing notification
+    local current_mode = vim.api.nvim_get_mode().mode
+    if current_mode:match("^i") then
+      return
+    end
 
     local spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }
     vim.notify(table.concat(msg, "\n"), "info", {

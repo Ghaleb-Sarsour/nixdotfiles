@@ -45,6 +45,7 @@
       htop
       hyprcursor
       hyprlock
+      hyprpanel
       hyprshade
       hyprshot
       hyprsunset
@@ -101,7 +102,7 @@
       vistafonts
       vlc
       vscode
-      waybar
+      # waybar
       wezterm
       wget
       wineWowPackages.stable
@@ -121,6 +122,8 @@
     # davinci-resolve
   ]);
  
+  services.upower.enable = true;
+
   services.flatpak.enable = true;
 
   #Fonts
