@@ -26,7 +26,6 @@
 
       # LSPs
       jdt-language-server
-      rust-analyzer
       nil
       typescript-language-server
       lua-language-server
