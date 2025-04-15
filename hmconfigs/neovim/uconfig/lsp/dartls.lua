@@ -1,5 +1,4 @@
 return {
-  name = 'dartls',
   cmd = { 'dart', 'language-server', '--protocol=lsp' },
   filetypes = { 'dart' },  -- Only attach to Dart files
   root_markers = {'pubspec.yaml'},

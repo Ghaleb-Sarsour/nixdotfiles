@@ -4,46 +4,44 @@
   environment.systemPackages = 
     #Unstable Programs
     (with pkgs; [
-      flutter
-      dart
 
-      # LSP's for Neovim
+      # Languages
+      go
+      lua51Packages.lua
+      nodejs_22
+      flutter
+      jdk
+      typescript
+      texliveMedium
+      sqlite
+      ruby
+      python313
+      rustc
+      rustup
+      cargo
+      php
+      dart
+      dotnetCorePackages.dotnet_9.sdk
+      mono
+
+      # LSPs
       jdt-language-server
       rust-analyzer
       nil
       typescript-language-server
       lua-language-server
       python313Packages.python-lsp-server
-
-      android-file-transfer
-      android-tools
-      bluetuith
-      brightnessctl
-      btop
-      cargo
       checkstyle
+
+      # Programs
+      btop
       chafa
       chromium
-      corefonts
-      curl
       discord
-      dmidecode 
-      dotnetCorePackages.dotnet_9.sdk
-      fastfetch
-      fd
-      ffmpeg
       firefox
-      fzf
-      gcc
-      geckodriver
-      git
-      git-lfs
-      glib
-      gnumake
-      go
+      fastfetch
       gparted
       greetd.tuigreet
-      helix
       htop
       hyprcursor
       hyprlock
@@ -51,69 +49,69 @@
       hyprshade
       hyprshot
       hyprsunset
-      inetutils
-      imagemagick
-      ipfetch
-      jdk
-      libgcc
-      librsvg
-      linuxKernel.packages.linux_6_6.vmware
-      lua51Packages.lua
-      luajitPackages.luarocks-nix
-      luajitPackages.magick
-      mono
       neovide
       neovim
-      networkmanager-openvpn
-      networkmanagerapplet
       nextcloud-client
-      nh
-      nodejs_22
       obs-studio
       onlyoffice-bin
       openvpn3
-      p7zip
       pavucontrol
-      php
+      rofi-wayland
+      scrcpy
+      swaynotificationcenter
+      unityhub
+      vimiv-qt
+      vlc
+      vscode
+      wezterm
+      yazi
+      zathura
+
+      # Other
+      android-file-transfer
+      android-tools
+      bluetuith
+      brightnessctl
+      corefonts
+      curl
+      dmidecode 
+      fd
+      ffmpeg
+      fzf
+      gcc
+      geckodriver
+      git
+      git-lfs
+      glib
+      gnumake
+      inetutils
+      imagemagick
+      ipfetch
+      libgcc
+      librsvg
+      luajitPackages.magick
+      networkmanager-openvpn
+      networkmanagerapplet
+      nh
+      p7zip
       php81Packages.composer
       pnpm
-      python313
       python313Packages.cmake
       python313Packages.pip
       rar
       ripgrep
       root
-      rofi-wayland
-      ruby
-      rustc
-      rustup
-      scrcpy
       starship
       steam-run
       steam-fhsenv-without-steam
-      sqlite
-      swaynotificationcenter
-      swww
-      texliveMedium
-      tmux
       tree-sitter
-      typescript
-      unityhub
       unzip
-      vimiv-qt
       vistafonts
-      vlc
-      vscode
-      # waybar
-      wezterm
       wget
       wineWowPackages.stable
       wl-clipboard
-      wordnet
       xdg-desktop-portal
       xorg.xhost
-      yazi
-      zathura
       zip
   ])
 
@@ -124,6 +122,7 @@
     # davinci-resolve
   ]);
  
+  #Used for hyprpanel battery indicator
   services.upower.enable = true;
 
   services.flatpak.enable = true;
