@@ -29,6 +29,7 @@ return {
         "tsx",
         "html",
         "css",
+        "dart",
         "markdown",
         "markdown_inline",
         "bash",

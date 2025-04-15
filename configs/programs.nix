@@ -4,6 +4,8 @@
   environment.systemPackages = 
     #Unstable Programs
     (with pkgs; [
+      flutter
+      dart
 
       # LSP's for Neovim
       jdt-language-server

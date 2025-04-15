@@ -39,6 +39,7 @@
 
     -- Configure plugin AFTER setting highlights
     require('render-markdown').setup({
+      completions = { lsp = { enabled = true } },
       bullet = { icons = { '', '󰋙', '◆', '◇', '', '○' } },
       heading = { 
         signs = {'󰫎', '󰫍'},
