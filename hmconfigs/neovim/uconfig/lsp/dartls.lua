@@ -1,11 +1,12 @@
 return {
   name = 'dartls',
   cmd = { 'dart', 'language-server', '--protocol=lsp' },
-  root_dir = vim.fs.dirname(vim.fs.find({ 'pubspec.yaml' }, { upward = true })[1]),
+  filetypes = { 'dart' },  -- Only attach to Dart files
+  root_markers = {'pubspec.yaml'},
   init_options = {
     closingLabels = true,
     flutterOutline = true,
-    onlyAnalyzeProjectsWithOpenFiles = false,
+    onlyAnalyzeProjectsWithOpenFiles = true,
     outline = true,
     suggestFromUnimportedLibraries = true,
   },
