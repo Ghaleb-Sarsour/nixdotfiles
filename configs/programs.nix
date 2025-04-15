@@ -30,7 +30,7 @@
       nil
       typescript-language-server
       lua-language-server
-      python313Packages.python-lsp-server
+      pylyzer
       checkstyle
 
       # Programs
