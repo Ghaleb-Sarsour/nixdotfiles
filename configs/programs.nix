@@ -49,7 +49,6 @@
       hyprshade
       hyprshot
       hyprsunset
-      lightworks
       neovide
       neovim
       nextcloud-client
