@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-stable, nixpkgs-stable, ... }:
+{ config, pkgs, pkgs-stable, inputs, nixpkgs-stable, ... }:
 
 {
   environment.systemPackages = 
@@ -36,6 +36,7 @@
       btop
       chafa
       chromium
+      cmatrix
       discord
       firefox
       fastfetch
@@ -48,6 +49,7 @@
       hyprshade
       hyprshot
       hyprsunset
+      lightworks
       neovide
       neovim
       nextcloud-client
@@ -65,6 +67,7 @@
       wezterm
       yazi
       zathura
+      inputs.zen-browser.packages."${system}".default 
 
       # Other
       android-file-transfer
