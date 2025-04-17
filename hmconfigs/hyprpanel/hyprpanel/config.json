@@ -20,13 +20,19 @@
       "left": [
         "dashboard",
         "workspaces",
-        "windowtitle"
+        "windowtitle",
+        "cava",
+        "ram",
+        "cpu",
+        "cputemp"
       ],
-      "middle": [],
+      "middle": [
+        "netstat"
+      ],
       "right": [
+        "updates",
         "systray",
         "volume",
-        "network",
         "bluetooth",
         "battery",
         "clock",
@@ -70,7 +76,7 @@
   "bar.network.truncation": false,
   "bar.network.showWifiInfo": true,
   "theme.bar.buttons.network.enableBorder": false,
-  "bar.network.label": false,
+  "bar.network.label": true,
   "bar.volume.label": true,
   "bar.volume.rightClick": "pavucontrol",
   "theme.bar.buttons.systray.enableBorder": false,
@@ -86,9 +92,12 @@
   "theme.osd.muted_zero": false,
   "menus.clock.time.military": false,
   "menus.clock.weather.enabled": false,
-  "menus.dashboard.shortcuts.enabled": true,
+  "menus.dashboard.shortcuts.enabled": false,
   "menus.dashboard.directories.enabled": false,
   "menus.dashboard.powermenu.avatar.image": "/home/ext4/.dotfiles/hmconfigs/hyprpanel/nixoslogo.jpg",
+  "menus.power.lowBatteryNotification": true,
+  "menus.power.lowBatteryNotificationText": "Your battery is running low ($POWER_LEVEL %).\\n\\nPlease plug in your charger.",
+  "menus.power.lowBatteryNotificationTitle":  "Warning: Low battery",
   "theme.bar.menus.menu.dashboard.profile.size": "8.5em",
   "theme.bar.menus.menu.dashboard.profile.radius": "0.4em",
   "bar.customModules.microphone.label": true,
