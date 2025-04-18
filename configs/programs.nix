@@ -33,6 +33,8 @@
       checkstyle
 
       # Programs
+      android-tools
+      google-chrome
       btop
       cava
       chafa
@@ -58,9 +60,9 @@
       onlyoffice-bin
       openvpn3
       pavucontrol
-      rofi-wayland
       scrcpy
       swaynotificationcenter
+      tofi
       unityhub
       vimiv-qt
       vlc

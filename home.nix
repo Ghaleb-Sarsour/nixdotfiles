@@ -6,12 +6,11 @@
     ./hmconfigs/shell/sh.nix
     ./hmconfigs/neovim/neovim.nix
     ./hmconfigs/hyprland/hyprland.nix
-    ./hmconfigs/waybar/waybar.nix
-    ./hmconfigs/rofi/rofi.nix
     ./hmconfigs/wezterm/wezterm.nix
     ./hmconfigs/starship/starship.nix
     ./hmconfigs/yazi/yazi.nix
     ./hmconfigs/hyprpanel/hyprpanel.nix
+    ./hmconfigs/tofi/tofi.nix
   ];
 
 
