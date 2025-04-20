@@ -12,6 +12,7 @@
       ./configs/programs.nix
       ./configs/connectivity.nix
       ./configs/battery.nix
+      ./configs/vm.nix
     ];
   
   #Enable Flakes

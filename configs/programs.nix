@@ -10,7 +10,8 @@
       lua51Packages.lua
       nodejs_22
       flutter
-      jdk
+      jdk23
+      javaPackages.openjfx23
       typescript
       texliveMedium
       sqlite
@@ -61,6 +62,7 @@
       openvpn3
       pavucontrol
       scrcpy
+      shotcut
       swaynotificationcenter
       tofi
       unityhub

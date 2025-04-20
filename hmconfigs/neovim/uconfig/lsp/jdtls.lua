@@ -4,8 +4,6 @@ return {
   root_markers = {'.project'},
   settings = {
     java = {
-      configuration = {
-      }
     },
   },
 }
