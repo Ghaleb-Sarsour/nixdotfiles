@@ -21,7 +21,7 @@
         "dashboard",
         "workspaces",
         "windowtitle",
-        "cava",
+        "storage",
         "ram",
         "cpu",
         "cputemp"
@@ -31,7 +31,6 @@
       ],
       "right": [
         "systray",
-        "updates",
         "volume",
         "battery",
         "clock",
@@ -42,13 +41,19 @@
       "left": [
         "dashboard",
         "workspaces",
-        "windowtitle"
+        "windowtitle",
+        "storage",
+        "ram",
+        "cpu",
+        "cputemp"
       ],
       "middle": [
-        "media"
+        "netstat"
       ],
       "right": [
+        "systray",
         "volume",
+        "battery",
         "clock",
         "notifications"
       ]
@@ -57,13 +62,19 @@
       "left": [
         "dashboard",
         "workspaces",
-        "windowtitle"
+        "windowtitle",
+        "storage",
+        "ram",
+        "cpu",
+        "cputemp"
       ],
       "middle": [
-        "media"
+        "netstat"
       ],
       "right": [
+        "systray",
         "volume",
+        "battery",
         "clock",
         "notifications"
       ]

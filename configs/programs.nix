@@ -61,7 +61,9 @@
       onlyoffice-bin
       openvpn3
       pavucontrol
+      prismlauncher
       scrcpy
+      sc-im
       shotcut
       swaynotificationcenter
       tofi
