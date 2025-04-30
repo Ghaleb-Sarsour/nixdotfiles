@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   #Import other config files
@@ -13,6 +13,7 @@
       ./configs/connectivity.nix
       ./configs/battery.nix
       ./configs/vm.nix
+      inputs.xremap-flake.nixosModules.default
     ];
   
   #Enable Flakes
@@ -23,6 +24,18 @@
 
   #Disable error reports in tty
   boot.kernelParams = [ "quiet" "loglevel=3"];
+
+  #Keymaps
+  services.xremap = {
+    withHypr = true;
+    userName = "ext4";
+    yamlConfig = ''
+      keymap:
+        - name: remaps;
+          remap:
+            CapsLock: Esc
+    '';
+  };
 
   #Optimization
   nix.optimise = {

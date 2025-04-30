@@ -82,7 +82,7 @@
   },
   "bar.customModules.cava.icon": "",
   "bar.customModules.cava.spaceCharacter": "",
-  "bar.customModules.cpuTemp.sensor": "/sys/devices/platform/thinkpad_hwmon/hwmon/hwmon4/temp1_input",
+  "bar.customModules.cpuTemp.sensor": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
   "menus.volume.raiseMaximumVolume": false,
   "bar.workspaces.workspaceMask": false,
   "bar.workspaces.show_numbered": true,

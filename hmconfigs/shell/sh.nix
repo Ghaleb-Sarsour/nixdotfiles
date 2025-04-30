@@ -5,7 +5,7 @@ let
     ll = "ls -l";
     ".." = "cd ..";
     "hmapply" = "nh home switch ~/.dotfiles/";
-    "flapply" = "nix flake update --flake ~/.dotfiles/ && nh os switch ~/.dotfiles/";
+    "flapply" = "nh os switch ~/.dotfiles/";
     "flupdate" = "nix flake update --flake ~/.dotfiles/ && nh os switch --update ~/.dotfiles/";
     zjs = "steam-run ~/zulu11.76.21-ca-fx-jdk11.0.25-linux_x64/bin/java";
     zjcs = "steam-run ~/zulu11.76.21-ca-fx-jdk11.0.25-linux_x64/bin/javac";

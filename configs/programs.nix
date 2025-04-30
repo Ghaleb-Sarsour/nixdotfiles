@@ -5,6 +5,11 @@
     #Unstable Programs
     (with pkgs; [
 
+      # Performance/Undervolting
+      stress
+      s-tui
+      linuxKernel.packages.linux_6_12.cpupower
+
       # Languages
       go
       lua51Packages.lua
@@ -18,7 +23,7 @@
       ruby
       python313
       rustc
-      rustup
+      rust-analyzer
       cargo
       php
       dart
@@ -37,6 +42,7 @@
       android-tools
       google-chrome
       btop
+      blender
       cava
       chafa
       chromium
@@ -75,6 +81,10 @@
       yazi
       zathura
       inputs.zen-browser.packages."${system}".default 
+
+      #Benchmarks
+      kdiskmark
+      furmark
 
       # Other
       android-file-transfer

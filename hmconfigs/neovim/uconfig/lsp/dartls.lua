@@ -1,6 +1,6 @@
 return {
   cmd = { 'dart', 'language-server', '--protocol=lsp' },
-  filetypes = { 'dart' },  -- Only attach to Dart files
+  filetypes = { 'dart' },
   root_markers = {'pubspec.yaml'},
   init_options = {
     closingLabels = true,
@@ -17,6 +17,7 @@ return {
     },
     flutter = {
       showOutline = true,
+      enableSdkFormatter = true,
     }
   },
 }

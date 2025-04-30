@@ -5,16 +5,17 @@
     #Grabbing Packages/Sources
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "nixpkgs/nixos-24.11";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    home-manager = {
-      url = "github:nix-community/home-manager/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    xremap-flake.url = "github:xremap/nix-flake";
   };
 
   outputs = {self, nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, hyprpanel, zen-browser, ...} @ inputs: 
