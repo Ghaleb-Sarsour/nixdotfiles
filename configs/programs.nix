@@ -31,6 +31,8 @@
       mono
 
       # LSPs
+      clippy
+      rustfmt
       jdt-language-server
       nil
       typescript-language-server

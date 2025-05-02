@@ -11,7 +11,6 @@ opt.spell = true
 opt.spelllang = { "en_us" }
 
 --Tabs
-opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
@@ -47,20 +46,20 @@ vim.o.foldlevel = 99
 vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.o.foldtext = ""
 vim.opt.foldcolumn = "0"
-vim.opt.fillchars:append({fold = " "})
+vim.opt.fillchars:append({ fold = " " })
 vim.o.foldmethod = 'expr'
 -- Default to treesitter folding
 vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 -- Prefer LSP folding if client supports it
 vim.api.nvim_create_autocmd('LspAttach', {
-    callback = function(args)
-         local client = vim.lsp.get_client_by_id(args.data.client_id)
-         if client:supports_method('textDocument/foldingRange') then
-             local win = vim.api.nvim_get_current_win()
-             vim.wo[win][0].foldexpr = 'v:lua.vim.lsp.foldexpr()'
-        end
-    end,
- })
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client:supports_method('textDocument/foldingRange') then
+      local win = vim.api.nvim_get_current_win()
+      vim.wo[win][0].foldexpr = 'v:lua.vim.lsp.foldexpr()'
+    end
+  end,
+})
 
 --LSP:
 vim.diagnostic.config({
@@ -102,7 +101,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     local client = vim.lsp.get_client_by_id(args.data.client_id)
 
     if client:supports_method('textDocument/inlayHint') then
-      vim.lsp.inlay_hint.enable(false, {bufnr = args.buf})
+      vim.lsp.inlay_hint.enable(false, { bufnr = args.buf })
     end
   end,
 })
@@ -123,7 +122,8 @@ vim.api.nvim_create_autocmd("LspProgress", {
   ---@param ev {data: {client_id: integer, params: lsp.ProgressParams}}
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
-    local value = ev.data.params.value --[[@as {percentage?: number, title?: string, message?: string, kind: "begin" | "report" | "end"}]]
+    local value = ev.data.params
+        .value --[[@as {percentage?: number, title?: string, message?: string, kind: "begin" | "report" | "end"}]]
     if not client or type(value) ~= "table" then
       return
     end
@@ -161,7 +161,7 @@ vim.api.nvim_create_autocmd("LspProgress", {
       title = client.name,
       opts = function(notif)
         notif.icon = #progress[client.id] == 0 and " "
-          or spinner[math.floor(vim.uv.hrtime() / (1e6 * 80)) % #spinner + 1]
+            or spinner[math.floor(vim.uv.hrtime() / (1e6 * 80)) % #spinner + 1]
       end,
     })
   end,
