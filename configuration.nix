@@ -46,7 +46,7 @@
   nix.optimise = {
     automatic = true; # Optimize timer-based
   };
-  nix.settings.auto-optimise-store = true; # Optimize during every rebuild
+  nix.settings.auto-optimise-store = false; # Optimize during every rebuild
   
   #Garbage Collection
   nix.gc = {
