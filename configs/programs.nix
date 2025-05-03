@@ -25,6 +25,8 @@
       python313
       rust-analyzer
       rustfmt
+      mold
+      rocmPackages.llvm.clang 
       php
       dart
       dotnetCorePackages.dotnet_9.sdk
