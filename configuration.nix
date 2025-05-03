@@ -16,6 +16,11 @@
       inputs.xremap-flake.nixosModules.default
     ];
   
+  #Persistent shells
+  nix.extraOptions = ''
+    keep-outputs = true
+  '';
+
   #Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes"];
 
@@ -119,7 +124,6 @@
     XDG_CONFIG_HOME = "$HOME/.config/";
     XDG_DATA_HOME = "$HOME/.local/share/";
     XDG_STATE_HOME = "$HOME/.local/state/";
-    # XDG_CURRENT_DESKTOP = "hyprland";
   };
 
 

@@ -1,7 +1,8 @@
-{ config, pkgs, pkgs-stable, inputs, nixpkgs-stable, ... }:
+{ config, pkgs, pkgs-stable, inputs, nixpkgs-stable, lib, ... }:
 
 {
   environment.systemPackages = 
+
     #Unstable Programs
     (with pkgs; [
 
