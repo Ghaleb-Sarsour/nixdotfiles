@@ -23,9 +23,8 @@
       sqlite
       ruby
       python313
-      rustc
       rust-analyzer
-      cargo
+      rustfmt
       php
       dart
       dotnetCorePackages.dotnet_9.sdk
@@ -33,7 +32,6 @@
 
       # LSPs
       clippy
-      rustfmt
       jdt-language-server
       nil
       typescript-language-server

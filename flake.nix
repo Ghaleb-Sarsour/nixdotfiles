@@ -6,6 +6,10 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "nixpkgs/nixos-24.11";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,7 +22,7 @@
     xremap-flake.url = "github:xremap/nix-flake";
   };
 
-  outputs = {self, nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, hyprpanel, zen-browser, ...} @ inputs: 
+  outputs = {self, nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, hyprpanel, zen-browser, rust-overlay,...} @ inputs: 
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -37,7 +41,13 @@
           modules = [
             ./configuration.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-e14-intel
-            {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
+            ({pkgs, ...}: {
+              nixpkgs.overlays = [
+                inputs.hyprpanel.overlay
+                inputs.rust-overlay.overlays.default
+              ];
+              environment.systemPackages = [pkgs.rust-bin.nightly.latest.default];
+            })
           ];
         };
       };
