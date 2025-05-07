@@ -124,8 +124,8 @@
       ripgrep
       root
       starship
-      steam-run
-      steam-fhsenv-without-steam
+      # steam-run
+      # steam-fhsenv-without-steam
       tree-sitter
       unzip
       vistafonts
@@ -147,7 +147,11 @@
   #Used for hyprpanel battery indicator
   services.upower.enable = true;
 
+  #Flatpaks
   services.flatpak.enable = true;
+
+  #Steam
+  programs.steam.enable = true;
 
   #Fonts
   fonts.packages = with pkgs; [
