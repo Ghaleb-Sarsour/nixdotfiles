@@ -7,8 +7,6 @@ let
     "hmapply" = "nh home switch ~/.dotfiles/";
     "flapply" = "nh os switch ~/.dotfiles/";
     "flupdate" = "nix flake update --flake ~/.dotfiles/ && nh os switch --update ~/.dotfiles/";
-    zjs = "steam-run ~/zulu11.76.21-ca-fx-jdk11.0.25-linux_x64/bin/java";
-    zjcs = "steam-run ~/zulu11.76.21-ca-fx-jdk11.0.25-linux_x64/bin/javac";
     sneovide = "(neovide &)";
     sendme = "~/.dotfiles/hmconfigs/shell/programs/sendme";
     fnall = "~/.dotfiles/hmconfigs/shell/programs/fnall";

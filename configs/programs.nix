@@ -43,16 +43,11 @@
 
       # Programs
       android-tools
-      google-chrome
       btop
       blender
-      cava
-      chafa
       chromium
       cmatrix
       discord
-      equibop
-      firefox
       fastfetch
       gparted
       greetd.tuigreet
@@ -63,6 +58,7 @@
       hyprshade
       hyprshot
       hyprsunset
+      ncdu
       neovide
       neovim
       nextcloud-client
@@ -124,8 +120,6 @@
       ripgrep
       root
       starship
-      # steam-run
-      # steam-fhsenv-without-steam
       tree-sitter
       unzip
       vistafonts
