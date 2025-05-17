@@ -13,7 +13,6 @@
       ./configs/connectivity.nix
       ./configs/battery.nix
       ./configs/vm.nix
-      inputs.xremap-flake.nixosModules.default
     ];
   
   #Persistent shells
@@ -30,17 +29,19 @@
   #Disable error reports in tty
   boot.kernelParams = [ "quiet" "loglevel=3"];
 
-  #Keymaps
-  services.xremap = {
-    withHypr = true;
-    userName = "ext4";
-    yamlConfig = ''
-      keymap:
-        - name: remaps;
-          remap:
-            CapsLock: Esc
-    '';
-  };
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = ["*"];
+        settings = {
+          main = {
+            capslock = "esc";
+          };
+        };
+      };
+    };
+  }; 
 
   #Optimization
   nix.optimise = {

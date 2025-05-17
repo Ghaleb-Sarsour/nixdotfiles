@@ -19,7 +19,6 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    xremap-flake.url = "github:xremap/nix-flake";
   };
 
   outputs = {self, nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, hyprpanel, zen-browser, rust-overlay,...} @ inputs: 

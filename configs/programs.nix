@@ -11,11 +11,16 @@
       s-tui
       linuxKernel.packages.linux_6_12.cpupower
 
+      #Benchmarks
+      kdiskmark
+      furmark
+
+      rustlings
+
       # Languages
       go
       lua51Packages.lua
       nodejs_22
-      flutter
       jdk23
       javaPackages.openjfx23
       typescript
@@ -28,7 +33,6 @@
       mold
       rocmPackages.llvm.clang 
       php
-      dart
       dotnetCorePackages.dotnet_9.sdk
       mono
 
@@ -39,7 +43,6 @@
       typescript-language-server
       lua-language-server
       pylyzer
-      checkstyle
 
       # Programs
       android-tools
@@ -72,7 +75,6 @@
       shotcut
       swaynotificationcenter
       tofi
-      unityhub
       vimiv-qt
       vlc
       vscode
@@ -81,9 +83,6 @@
       zathura
       inputs.zen-browser.packages."${system}".default 
 
-      #Benchmarks
-      kdiskmark
-      furmark
 
       # Other
       android-file-transfer
@@ -140,6 +139,8 @@
  
   #Used for hyprpanel battery indicator
   services.upower.enable = true;
+
+  virtualisation.waydroid.enable = true;
 
   #Flatpaks
   services.flatpak.enable = true;

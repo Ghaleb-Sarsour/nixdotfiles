@@ -1,16 +1,8 @@
 vim.cmd('let g:netrw_liststyle = 3')
--- vim.cmd("highlight Folded guibg=darkblue guifg=white")
-
--- vim.api.nvim_set_hl(0, "Folded", {
---   fg = "white",
---   bg = "darkblue",
---   ctermfg = "white",  -- For terminal
---   ctermbg = "darkblue",
--- })
 
 vim.defer_fn(function()
   vim.api.nvim_set_hl(0, "Folded", { fg = "white", bg = "darkblue" })
-end, 50)  --
+end, 50)
 
 local opt = vim.opt
 
