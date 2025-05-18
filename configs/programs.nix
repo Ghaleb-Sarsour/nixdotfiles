@@ -70,6 +70,7 @@
       openvpn3
       pavucontrol
       prismlauncher
+      qutebrowser
       scrcpy
       sc-im
       shotcut
