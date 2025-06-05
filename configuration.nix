@@ -37,6 +37,13 @@
         settings = {
           main = {
             capslock = "esc";
+            leftalt = "layer(layer1)";
+          };
+          layer1 = {
+            h = "left";
+            j = "down";
+            k = "up";
+            l = "right";
           };
         };
       };

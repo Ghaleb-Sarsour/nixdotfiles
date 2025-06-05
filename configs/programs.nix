@@ -114,6 +114,7 @@
       p7zip
       php81Packages.composer
       pnpm
+      python312Packages.adblock
       python313Packages.cmake
       python313Packages.pip
       rar
