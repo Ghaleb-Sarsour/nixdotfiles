@@ -27,7 +27,11 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   #Disable error reports in tty
-  boot.kernelParams = [ "quiet" "loglevel=3"];
+  boot.kernelParams = [ 
+    "quiet"
+    "loglevel=0" 
+    "console_loglevel=0"
+  ];
 
   services.keyd = {
     enable = true;
@@ -37,6 +41,7 @@
         settings = {
           main = {
             capslock = "esc";
+            rightalt = "layer(layer1)";
             leftalt = "layer(layer1)";
           };
           layer1 = {
