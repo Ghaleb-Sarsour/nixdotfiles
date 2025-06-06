@@ -49,6 +49,9 @@
             j = "down";
             k = "up";
             l = "right";
+            capslock = "backspace";
+            tab = "delete";
+            n = "\"";
           };
         };
       };
