@@ -50,7 +50,7 @@
             k = "up";
             l = "right";
             capslock = "backspace";
-            tab = "delete";
+            d = "delete";
             n = "\"";
           };
         };
