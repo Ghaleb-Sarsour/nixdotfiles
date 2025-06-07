@@ -100,7 +100,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-8bf3a96c-aeee-4611-a317-4ac1e1fa9d82".device = "/dev/disk/by-uuid/8bf3a96c-aeee-4611-a317-4ac1e1fa9d82";
+  boot.initrd.luks.devices."luks-dbbf44ef-2ce8-4798-8dba-fbee99e328ae".device = "/dev/disk/by-uuid/dbbf44ef-2ce8-4798-8dba-fbee99e328ae";
   networking.hostName = "nixos"; # Define your hostname.
 
   # Set your time zone.
