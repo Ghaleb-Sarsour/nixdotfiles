@@ -7,6 +7,7 @@
     (with pkgs; [
 
       # Performance/Undervolting
+      hyprpolkitagent
       stress
       s-tui
       linuxKernel.packages.linux_6_12.cpupower
@@ -61,6 +62,7 @@
       hyprshade
       hyprshot
       hyprsunset
+      mailspring
       ncdu
       neovide
       neovim

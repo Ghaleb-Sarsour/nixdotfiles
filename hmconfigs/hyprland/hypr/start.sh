@@ -6,4 +6,5 @@ nextcloud &
 # swaynotificationcenter &
 blueman-applet &
 discord &
+systemctl --user start hyprpolkitagent
 xhost si:localuser:root        
