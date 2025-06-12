@@ -7,7 +7,6 @@
     (with pkgs; [
 
       # Performance/Undervolting
-      hyprpolkitagent
       stress
       s-tui
       linuxKernel.packages.linux_6_12.cpupower
@@ -85,6 +84,7 @@
       yazi
       zathura
       inputs.zen-browser.packages."${system}".default 
+      zenity
 
 
       # Other
@@ -108,6 +108,7 @@
       imagemagick
       ipfetch
       libgcc
+      libnotify
       librsvg
       luajitPackages.magick
       networkmanager-openvpn

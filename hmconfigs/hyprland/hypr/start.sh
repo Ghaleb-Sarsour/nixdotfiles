@@ -6,5 +6,5 @@ nextcloud &
 # swaynotificationcenter &
 blueman-applet &
 discord &
-systemctl --user start hyprpolkitagent
+mailspring --password-store="gnome-libsecret"
 xhost si:localuser:root        
