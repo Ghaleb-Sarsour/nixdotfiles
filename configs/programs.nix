@@ -6,6 +6,9 @@
     #Unstable Programs
     (with pkgs; [
 
+      librewolf 
+      kdePackages.kdeconnect-kde
+
       # Performance/Undervolting
       stress
       s-tui
