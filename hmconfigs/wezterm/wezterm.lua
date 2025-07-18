@@ -16,6 +16,8 @@ config.window_decorations = "RESIZE"
 
 config.window_background_opacity = 0.9
 
+config.enable_wayland = true
+
 
 -- Return config
 return config
