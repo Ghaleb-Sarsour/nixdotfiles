@@ -68,6 +68,7 @@
       hyprcursor
       hyprlock
       hyprpanel
+      hyprpaper
       hyprshade
       hyprshot
       hyprsunset

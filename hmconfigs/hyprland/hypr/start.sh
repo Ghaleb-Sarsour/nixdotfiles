@@ -1,3 +1,4 @@
+hyprpaper & 
 hyprpanel &
 nextcloud &
 blueman-applet &
