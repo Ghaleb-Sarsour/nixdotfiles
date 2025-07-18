@@ -1,12 +1,20 @@
 { config, pkgs, pkgs-stable, inputs, nixpkgs-stable, lib, ... }:
 
 {
+
+  hardware.xpadneo.enable = true;
+  hardware.steam-hardware.enable = true;
+  # hardware.xone.enable = true;
+
   environment.systemPackages = 
 
     #Unstable Programs
     (with pkgs; [
 
+      protontricks
+      protonup-qt
       librewolf 
+
       kdePackages.kdeconnect-kde
 
       # Performance/Undervolting
@@ -27,7 +35,6 @@
       jdk23
       javaPackages.openjfx23
       typescript
-      texliveMedium
       sqlite
       ruby
       python313
@@ -73,11 +80,9 @@
       onlyoffice-bin
       openvpn3
       pavucontrol
-      prismlauncher
       qutebrowser
       scrcpy
       sc-im
-      shotcut
       swaynotificationcenter
       tofi
       vimiv-qt
@@ -86,7 +91,6 @@
       wezterm
       yazi
       zathura
-      inputs.zen-browser.packages."${system}".default 
       zenity
 
 
@@ -142,16 +146,24 @@
   #Stable Packages
   (with pkgs-stable; [
     hollywood
-    # davinci-resolve
+    davinci-resolve
+    texliveMedium
+    prismlauncher
   ]);
  
+  #Flatpaks
+  services.flatpak.enable = true;
+  services.flatpak.update.onActivation = true; 
+  services.flatpak.packages = [
+    "org.vinegarhq.Sober"
+  ]; 
+
+
   #Used for hyprpanel battery indicator
   services.upower.enable = true;
 
   virtualisation.waydroid.enable = true;
 
-  #Flatpaks
-  services.flatpak.enable = true;
 
   #Steam
   programs.steam.enable = true;

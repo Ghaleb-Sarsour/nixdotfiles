@@ -4,7 +4,7 @@
   inputs = {
     #Grabbing Packages/Sources
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "nixpkgs/nixos-24.11";
+    nixpkgs-stable.url = "nixpkgs/nixos-25.05";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
@@ -14,14 +14,10 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = {self, nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, hyprpanel, zen-browser, rust-overlay,...} @ inputs: 
+  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, rust-overlay, nix-flatpak, ...} @ inputs: 
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -38,11 +34,11 @@
             inherit inputs;
           };
           modules = [
-            ./configuration.nix
+            nix-flatpak.nixosModules.nix-flatpak
             nixos-hardware.nixosModules.lenovo-thinkpad-e14-intel
+            ./configuration.nix
             ({pkgs, ...}: {
               nixpkgs.overlays = [
-                inputs.hyprpanel.overlay
                 inputs.rust-overlay.overlays.default
               ];
               environment.systemPackages = [
