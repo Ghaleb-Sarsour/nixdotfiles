@@ -4,10 +4,21 @@
 
   hardware.xpadneo.enable = true;
   hardware.steam-hardware.enable = true;
-  # hardware.xone.enable = true;
 
-  services.displayManager.ly =  {
+  services.displayManager.ly = {
     enable = true;
+    settings = {
+      animation = "matrix";
+      bigclock = true;
+      clock = "%m-%d-%Y %H:%M:%S";
+      blank_password = true;
+      asterisk = "*"; 
+      bg = 1;
+      fg = 8;
+      blank_box = true;
+      hide_borders = true;
+      hide_key_hints = true;
+    };
   };
 
   environment.systemPackages = 
