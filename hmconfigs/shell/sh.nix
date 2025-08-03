@@ -30,7 +30,9 @@ in
       # History Keybinds
       bindkey "''${key[Up]}" history-substring-search-up
       bindkey "''${key[Down]}" history-substring-search-down
-    
+
+      # Run root
+      xhost si:localuser:root    
     
     '';
 

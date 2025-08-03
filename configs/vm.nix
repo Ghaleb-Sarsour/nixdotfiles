@@ -1,26 +1,27 @@
-{config, pkgs, ...}: 
+{config, pkgs, ... }:
 
 {
-
   programs.dconf.enable = true;
-
+  
   users.users.ext4.extraGroups = [ "libvirtd" ];
-
+  
   environment.systemPackages = with pkgs; [
-    qemu
     virt-manager
     virt-viewer
-    spice
+    spice 
     spice-gtk
     spice-protocol
-    win-spice
     win-virtio
+    win-spice
     adwaita-icon-theme
   ];
-
+  
   virtualisation = {
     libvirtd = {
       enable = true;
+      onBoot = "start";
+      onShutdown = "shutdown";
+      extraConfig = "firewall_backend=iptables";
       qemu = {
         swtpm.enable = true;
         ovmf.enable = true;
@@ -30,5 +31,5 @@
     spiceUSBRedirection.enable = true;
   };
   services.spice-vdagentd.enable = true;
-
 }
+

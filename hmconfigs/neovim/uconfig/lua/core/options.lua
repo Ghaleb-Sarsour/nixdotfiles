@@ -107,6 +107,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     if client:supports_method('textDocument/inlayHint') then
       vim.lsp.inlay_hint.enable(false, { bufnr = args.buf })
     end
+
+    -- Disable info hover
+    vim.lsp.handlers["textDocument/hover"] = function() end
   end,
 })
 

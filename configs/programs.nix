@@ -6,6 +6,10 @@
   hardware.steam-hardware.enable = true;
   # hardware.xone.enable = true;
 
+  services.displayManager.ly =  {
+    enable = true;
+  };
+
   environment.systemPackages = 
 
     #Unstable Programs
@@ -14,6 +18,7 @@
       protontricks
       protonup-qt
       librewolf 
+      wireshark
 
       kdePackages.kdeconnect-kde
 
@@ -63,7 +68,6 @@
       discord
       fastfetch
       gparted
-      greetd.tuigreet
       htop
       hyprcursor
       hyprlock
@@ -118,6 +122,7 @@
       libgcc
       libnotify
       librsvg
+      libvirt-glib
       luajitPackages.magick
       networkmanager-openvpn
       networkmanagerapplet
@@ -184,24 +189,24 @@
   programs.zsh.enable = true;
   
   #Greeter
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-        user = "greeter";
-      };
-    };
-  };
-  systemd.services.greetd.serviceConfig = {
-    Type = "idle";
-    StandardInput = "tty";
-    StandardOutput = "tty";
-    StandardError = "journal";
-    TTYReset = true;
-    TTYVHangup = true;
-    TTYVTDisallocate = true;
-  };
+  # services.greetd = {
+  #   enable = true;
+  #   settings = {
+  #     default_session = {
+  #       command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+  #       user = "greeter";
+  #     };
+  #   };
+  # };
+  # systemd.services.greetd.serviceConfig = {
+  #   Type = "idle";
+  #   StandardInput = "tty";
+  #   StandardOutput = "tty";
+  #   StandardError = "journal";
+  #   TTYReset = true;
+  #   TTYVHangup = true;
+  #   TTYVTDisallocate = true;
+  # };
 
   #keyring 
   services.gnome.gnome-keyring.enable = true;
