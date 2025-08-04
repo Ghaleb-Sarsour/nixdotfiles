@@ -5,44 +5,19 @@
   hardware.xpadneo.enable = true;
   hardware.steam-hardware.enable = true;
 
-  services.displayManager.ly = {
-    enable = true;
-    settings = {
-      animation = "matrix";
-      bigclock = true;
-      clock = "%m-%d-%Y %H:%M:%S";
-      blank_password = true;
-      asterisk = "*"; 
-      bg = 1;
-      fg = 8;
-      blank_box = true;
-      hide_borders = true;
-      hide_key_hints = true;
-    };
-  };
-
   environment.systemPackages = 
 
     #Unstable Programs
     (with pkgs; [
 
-      protontricks
       protonup-qt
       librewolf 
-      wireshark
 
       kdePackages.kdeconnect-kde
 
       # Performance/Undervolting
-      stress
       s-tui
       linuxKernel.packages.linux_6_12.cpupower
-
-      #Benchmarks
-      kdiskmark
-      furmark
-
-      rustlings
 
       # Languages
       go
@@ -179,8 +154,8 @@
   #Used for hyprpanel battery indicator
   services.upower.enable = true;
 
+  #Android
   virtualisation.waydroid.enable = true;
-
 
   #Steam
   programs.steam.enable = true;
@@ -199,31 +174,8 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
   
-  #Greeter
-  # services.greetd = {
-  #   enable = true;
-  #   settings = {
-  #     default_session = {
-  #       command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-  #       user = "greeter";
-  #     };
-  #   };
-  # };
-  # systemd.services.greetd.serviceConfig = {
-  #   Type = "idle";
-  #   StandardInput = "tty";
-  #   StandardOutput = "tty";
-  #   StandardError = "journal";
-  #   TTYReset = true;
-  #   TTYVHangup = true;
-  #   TTYVTDisallocate = true;
-  # };
-
   #keyring 
   services.gnome.gnome-keyring.enable = true;
-
-  #VPN
-  programs.openvpn3.enable = true;
 
   #Hyprland
   programs.hyprland = {

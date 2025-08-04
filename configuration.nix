@@ -13,6 +13,9 @@
       ./configs/connectivity.nix
       ./configs/battery.nix
       ./configs/vm.nix
+      ./configs/hardening/kernel.nix
+      ./configs/hardening/systemd.nix
+      ./configs/hardening/antivirus.nix
     ];
   
   #Persistent shells
@@ -87,6 +90,23 @@
       libvdpau-va-gl 
 
     ];
+  };
+
+  # Display Manager
+  services.displayManager.ly = {
+    enable = true;
+    settings = {
+      animation = "matrix";
+      bigclock = true;
+      clock = "%m-%d-%Y %H:%M:%S";
+      blank_password = true;
+      asterisk = "*"; 
+      bg = 1;
+      fg = 8;
+      blank_box = true;
+      hide_borders = true;
+      hide_key_hints = true;
+    };
   };
 
   #Sound

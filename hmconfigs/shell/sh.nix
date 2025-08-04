@@ -3,14 +3,16 @@
 let
   aliases = {
     ll = "ls -l";
-    ".." = "cd ..";
-    "hmapply" = "nh home switch ~/.dotfiles/";
-    "flapply" = "nh os switch ~/.dotfiles/";
-    "flupdate" = "nix flake update --flake ~/.dotfiles/ && nh os switch --update ~/.dotfiles/";
+    hmapply = "nh home switch ~/.dotfiles/";
+    flapply = "nh os switch ~/.dotfiles/";
+    flupdate = "nix flake update --flake ~/.dotfiles/ && nh os switch --update ~/.dotfiles/";
     sneovide = "(neovide &)";
     sendme = "~/.dotfiles/hmconfigs/shell/programs/sendme";
     fnall = "~/.dotfiles/hmconfigs/shell/programs/fnall";
     bevy = "nix-shell ~/.dotfiles/dev-envs/bevy.nix";
+    nix-clean = "sudo nix-collect-garbage -d && sudo nix-store --optimise -v && ncdu";
+    virus-check = "sudo aide --check > /home/ext4/aidecheck.txt && sudo chkrootkit > /home/ext4/rootkitcheck.txt";
+    virus-upgrade = "sudo aide --update && sudo mv /etc/aide.db.new /etc/aide.db && sudo clamscan --remove -r /home/ext4";
   };
 
 in
