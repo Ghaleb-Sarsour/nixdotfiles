@@ -12,6 +12,7 @@
 
       protonup-qt
       librewolf 
+      sbctl
 
       kdePackages.kdeconnect-kde
 

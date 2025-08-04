@@ -15,9 +15,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.2"; 
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, rust-overlay, nix-flatpak, ...} @ inputs: 
+  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, rust-overlay, nix-flatpak, lanzaboote, ...} @ inputs: 
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -34,10 +38,12 @@
             inherit inputs;
           };
           modules = [
+            lanzaboote.nixosModules.lanzaboote
             nix-flatpak.nixosModules.nix-flatpak
             nixos-hardware.nixosModules.lenovo-thinkpad-e14-intel
             ./configuration.nix
-            ({pkgs, ...}: {
+            ({ pkgs, lib, ...}: {
+
               nixpkgs.overlays = [
                 inputs.rust-overlay.overlays.default
               ];
@@ -46,6 +52,14 @@
                   extensions = [ "rustc-codegen-cranelift-preview" ];
                 })
               ];
+
+              boot.loader.systemd-boot.enable = lib.mkForce false;
+
+              boot.lanzaboote = {
+                enable = true;
+                pkiBundle = "/var/lib/sbctl/";
+              };
+
             })
           ];
         };

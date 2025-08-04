@@ -2,9 +2,6 @@
 
 {
   
-  #SSH
-  services.openssh.enable = true;
-
   #Networking
   networking.networkmanager = {
     enable = true;
