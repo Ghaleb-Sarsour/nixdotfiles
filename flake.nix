@@ -19,6 +19,10 @@
       url = "github:nix-community/lanzaboote/v0.4.2"; 
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    oisd = {
+      url = "https://big.oisd.nl/domainswild";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, rust-overlay, nix-flatpak, lanzaboote, ...} @ inputs: 

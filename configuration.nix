@@ -18,6 +18,7 @@
       ./configs/hardening/antivirus.nix
       ./configs/hardening/sshd.nix
       ./configs/hardening/usbguard.nix
+      ./configs/hardening/dnscrypt-proxy.nix
     ];
    
   custom.security.usbguard.enable = true;  
