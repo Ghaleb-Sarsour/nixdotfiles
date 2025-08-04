@@ -11,8 +11,9 @@ let
     fnall = "~/.dotfiles/hmconfigs/shell/programs/fnall";
     bevy = "nix-shell ~/.dotfiles/dev-envs/bevy.nix";
     nix-clean = "sudo nix-collect-garbage -d && sudo nix-store --optimise -v && ncdu";
-    virus-check = "sudo aide --check > /home/ext4/aidecheck.txt && sudo chkrootkit > /home/ext4/rootkitcheck.txt";
-    virus-upgrade = "sudo aide --update && sudo mv /etc/aide.db.new /etc/aide.db && sudo clamscan --remove -r /home/ext4";
+    virus-check = "sudo aide --check > /home/ext4/aidecheck.txt && sudo chkrootkit | cat /home/ext4/rootkitcheck.txt";
+    virus-upgrade = "sudo aide --update && sudo mv /etc/aide.db.new /etc/aide.db";
+    usb-connect = "sudo systemctl restart usbguard.service";
   };
 
 in

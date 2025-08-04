@@ -16,8 +16,12 @@
       ./configs/hardening/kernel.nix
       ./configs/hardening/systemd.nix
       ./configs/hardening/antivirus.nix
+      ./configs/hardening/sshd.nix
+      ./configs/hardening/usbguard.nix
     ];
-  
+   
+  custom.security.usbguard.enable = true;  
+
   #Persistent shells
   nix.extraOptions = ''
     keep-outputs = true

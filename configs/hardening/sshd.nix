@@ -28,7 +28,7 @@
           MaxSessions = 2;
           ClientAliveInterval = 300;
           ClientAliveCountMax = 0;
-          AllowUsers = ["your-user"];
+          AllowUsers = ["ext4"];
           TCPKeepAlive = false;
           AllowTcpForwarding = false;
           AllowAgentForwarding = false;
