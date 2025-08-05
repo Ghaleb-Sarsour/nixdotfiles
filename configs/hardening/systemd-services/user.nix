@@ -8,12 +8,13 @@
     ProtectKernelLogs = true;
     ProtectProc = "invisible";
     PrivateTmp = true;
-    PrivateNetwork = true;
+    PrivateNetwork = false;
     MemoryDenyWriteExecute = true;
     RestrictAddressFamilies = [ 
       "AF_UNIX" 
       "AF_NETLINK"
       "AF_BLUETOOTH"
+      "AF_INET"
     ];
     RestrictNamespaces = true;
     RestrictRealtime = true;
