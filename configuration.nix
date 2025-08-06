@@ -10,24 +10,23 @@
     [
       ./hardware-configuration.nix
       ./configs/programs.nix
-      ./configs/connectivity.nix
+      ./configs/networking.nix
       ./configs/battery.nix
       ./configs/vm.nix
       ./configs/hardening/kernel.nix
       ./configs/hardening/systemd.nix
-      ./configs/hardening/antivirus.nix
       ./configs/hardening/sshd.nix
       ./configs/hardening/usbguard.nix
       ./configs/hardening/dnscrypt-proxy.nix
       ./configs/hardening/firewall.nix
     ];
    
+  
+  #Enable Usbguard
   custom.security.usbguard.enable = true;  
 
   #Persistent shells
-  nix.extraOptions = ''
-    keep-outputs = true
-  '';
+  nix.extraOptions = ''keep-outputs = true'';
 
   #Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes"];
@@ -42,6 +41,7 @@
     "console_loglevel=0"
   ];
 
+  #Keymapper
   services.keyd = {
     enable = true;
     keyboards = {
@@ -68,9 +68,7 @@
   }; 
 
   #Optimization
-  nix.optimise = {
-    automatic = true; # Optimize timer-based
-  };
+  nix.optimise.automatic = true; # Optimize timer-based
   nix.settings.auto-optimise-store = false; # Optimize during every rebuild
   
   #Garbage Collection
@@ -94,7 +92,6 @@
       intel-media-driver #For Broadwell (2014) or newer processors. LIBVA_DRIVER_NAME-iHD
       intel-vaapi-driver
       libvdpau-va-gl 
-
     ];
   };
 
@@ -129,8 +126,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Encryption
   boot.initrd.luks.devices."luks-dbbf44ef-2ce8-4798-8dba-fbee99e328ae".device = "/dev/disk/by-uuid/dbbf44ef-2ce8-4798-8dba-fbee99e328ae";
-  networking.hostName = "nixos"; # Define your hostname.
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -161,7 +158,6 @@
     isNormalUser = true;
     description = "ext4";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
   };
 
   environment.sessionVariables = rec {
@@ -171,8 +167,6 @@
     XDG_STATE_HOME = "$HOME/.local/state/";
   };
 
-
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -180,5 +174,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }

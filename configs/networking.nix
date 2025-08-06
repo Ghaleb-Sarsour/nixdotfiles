@@ -2,8 +2,9 @@
 
 {
   #Networking
-  networking.networkmanager = {
-    enable = true;
+  networking = {
+    hostName = "Ext4-NixOS";
+    networkmanager.enable = true;
   };
 
   #Bluetooth
@@ -20,7 +21,4 @@
     nssmdns4 = true;
     openFirewall = true;
   };
-    
 }
-  
-  

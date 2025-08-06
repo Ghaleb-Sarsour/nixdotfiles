@@ -1,24 +1,19 @@
 { config, pkgs, pkgs-stable, inputs, nixpkgs-stable, lib, ... }:
 
 {
-
-  hardware.xpadneo.enable = true;
-  hardware.steam-hardware.enable = true;
-
   environment.systemPackages = 
 
     #Unstable Programs
     (with pkgs; [
 
-      protonup-qt
-      librewolf 
-      sbctl
-
-      kdePackages.kdeconnect-kde
-
       # Performance/Undervolting
       s-tui
       linuxKernel.packages.linux_6_12.cpupower
+
+      #Security
+      lynis
+      chkrootkit
+      aide
 
       # Languages
       go
@@ -48,8 +43,8 @@
 
       # Programs
       android-tools
+      bitwarden
       btop
-      blender
       chromium
       cmatrix
       discord
@@ -59,10 +54,10 @@
       hyprcursor
       hyprlock
       hyprpanel
-      hyprpaper
       hyprshade
       hyprshot
-      hyprsunset
+      kdePackages.kdeconnect-kde
+      librewolf 
       mailspring
       ncdu
       neovide
@@ -70,12 +65,11 @@
       nextcloud-client
       obs-studio
       onlyoffice-bin
-      openvpn3
       pavucontrol
-      qutebrowser
+      protonup-qt
+      sbctl
       scrcpy
       sc-im
-      swaynotificationcenter
       tofi
       vimiv-qt
       vlc
@@ -83,8 +77,6 @@
       wezterm
       yazi
       zathura
-      zenity
-
 
       # Other
       android-file-transfer
@@ -133,6 +125,7 @@
       xdg-desktop-portal
       xorg.xhost
       zip
+
   ])
 
   ++
@@ -151,6 +144,19 @@
     "org.vinegarhq.Sober"
   ]; 
 
+  #Fonts
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
+    nerd-fonts.jetbrains-mono
+    corefonts
+    vistafonts
+  ];
+
+  #Gamepad Settings
+  hardware.xpadneo.enable = true;
+  hardware.steam-hardware.enable = true;
+  services.pcscd.enable = true;
 
   #Used for hyprpanel battery indicator
   services.upower.enable = true;
@@ -160,15 +166,6 @@
 
   #Steam
   programs.steam.enable = true;
-
-  #Fonts
-  fonts.packages = with pkgs; [
-    nerd-fonts.fira-code
-    nerd-fonts.droid-sans-mono
-    nerd-fonts.jetbrains-mono
-    corefonts
-    vistafonts
-  ];
 
   #Zsh
   environment.shells = with pkgs; [ zsh ];
