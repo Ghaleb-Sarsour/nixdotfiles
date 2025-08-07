@@ -11,6 +11,8 @@
     ./hmconfigs/hyprpanel/hyprpanel.nix
     ./hmconfigs/tofi/tofi.nix
     ./hmconfigs/librewolf/librewolf.nix
+    ./hmconfigs/icons/icons.nix
+    ./hmconfigs/themes/themes.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -29,5 +31,14 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
-
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "librewolf.desktop";
+      "x-scheme-handler/http" = "librewolf.desktop";
+      "x-scheme-handler/https" = "librewolf.desktop";
+      "x-scheme-handler/about" = "librewolf.desktop";
+      "x-scheme-handler/unknown" = "librewolf.desktop";
+    };
+  };
 }

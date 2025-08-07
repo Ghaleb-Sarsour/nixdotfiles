@@ -12,7 +12,7 @@
       ./configs/programs.nix
       ./configs/networking.nix
       ./configs/battery.nix
-      ./configs/vm.nix
+      # ./configs/vm.nix
       ./configs/hardening/kernel.nix
       ./configs/hardening/systemd.nix
       ./configs/hardening/sshd.nix

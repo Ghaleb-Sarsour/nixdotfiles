@@ -6,6 +6,8 @@
     #Unstable Programs
     (with pkgs; [
 
+      nwg-look
+
       # Performance/Undervolting
       s-tui
       linuxKernel.packages.linux_6_12.cpupower

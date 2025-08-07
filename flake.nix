@@ -35,7 +35,7 @@
     {
       #Create System Configurations
       nixosConfigurations = {
-        nixos = lib.nixosSystem {
+        Ext4-NixOS = lib.nixosSystem {
           inherit system;
           specialArgs = {
             inherit pkgs-stable;
