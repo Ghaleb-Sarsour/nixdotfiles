@@ -3,9 +3,8 @@
 {
   services = { 
     power-profiles-daemon.enable = false;  
-    thermald.enable = true; 
     system76-scheduler = {
-      enable = true;
+      enable = false;
       useStockConfig = true;
       settings.cfsProfiles.enable = true;
     };

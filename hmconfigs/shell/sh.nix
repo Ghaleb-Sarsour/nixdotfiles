@@ -3,7 +3,7 @@
 let
   aliases = {
     ll = "ls -l";
-    hmapply = "nh home switch ~/.dotfiles/";
+    hmapply = "home-manager switch --flake ~/.dotfiles/";
     flapply = "nh os switch ~/.dotfiles/";
     flupdate = "nix flake update --flake ~/.dotfiles/ && nh os switch --update ~/.dotfiles/";
     sneovide = "(neovide &)";
@@ -14,11 +14,12 @@ let
     virus-check = "sudo aide --check > /home/ext4/aidecheck.txt && sudo chkrootkit | cat /home/ext4/rootkitcheck.txt && sudo lynis audit system";
     virus-upgrade = "sudo aide --update && sudo mv /etc/aide.db.new /etc/aide.db";
     usb-connect = "sudo systemctl restart usbguard.service";
+    low-power = "sudo tlp bat";
+    high-power = "sudo tlp ac";
   };
 
 in
 {
-
   programs.zsh = {
     enable = true;
     shellAliases = aliases;

@@ -2,10 +2,10 @@
 
 {
   imports = [
-    ./systemd-services/NetworkManager-dispatcher.nix #1
-    ./systemd-services/NetworkManager.nix #1
-    ./systemd-services/nscd.nix #1
-    ./systemd-services/wpa_supplicant.nix #1
+    ./systemd-services/NetworkManager-dispatcher.nix 
+    ./systemd-services/NetworkManager.nix 
+    ./systemd-services/nscd.nix 
+    ./systemd-services/wpa_supplicant.nix 
     ./systemd-services/bluetooth.nix
     ./systemd-services/cups.nix
     ./systemd-services/dbus.nix
@@ -22,8 +22,19 @@
     ./systemd-services/systemd-journald.nix
     ./systemd-services/systemd-machined.nix
     ./systemd-services/user.nix
+    ./systemd-services/fail2ban.nix
+    ./systemd-services/systemd-udevd.nix
+    ./systemd-services/emergency.nix
+    ./systemd-services/throttled.nix
+    ./systemd-services/display-manager.nix
   ];
-  systemd.services.cups-browsed.enable = false; # Disable cups-browsed service
+
+  #Disabled Services
+  networking.modemmanager.enable = false;
+  systemd.services.pcscd.enable = false;
+  systemd.services.cups-browsed.enable = false;
+
+  #Systemd Settings
   users.groups.netdev = {};
   services = {
     dbus.implementation = "broker";

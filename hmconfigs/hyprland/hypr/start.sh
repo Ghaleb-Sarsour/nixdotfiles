@@ -1,3 +1,4 @@
+hyprpaper &
 hyprctl setcursor "Night Diamond (Blue)" 25 & 
 hyprpanel &
 nextcloud &

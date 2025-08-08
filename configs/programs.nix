@@ -56,6 +56,7 @@
       hyprcursor
       hyprlock
       hyprpanel
+      hyprpaper
       hyprshade
       hyprshot
       kdePackages.kdeconnect-kde
@@ -162,9 +163,6 @@
 
   #Used for hyprpanel battery indicator
   services.upower.enable = true;
-
-  #Android
-  virtualisation.waydroid.enable = true;
 
   #Steam
   programs.steam.enable = true;
