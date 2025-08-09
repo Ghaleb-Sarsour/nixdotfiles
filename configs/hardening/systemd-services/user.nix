@@ -1,5 +1,13 @@
 {
   systemd.services."user@".serviceConfig = {
+    NoNewPrivileges = true;
+
+    LockPersonality = true; 
+    ProtectControlGroups = true;
+    ProcSubset = "pid"; 
+    PrivateMounts = true; 
+    ProtectHome = true;
+ 
     ProtectSystem = "strict";
     ProtectClock = true; 
     ProtectHostname = true;
@@ -26,7 +34,10 @@
       "~@module"
       "~@obsolete" 
       "~@cpu-emulation" 
+      "~@mount"
+      "~@reboot"
     ];
     SystemCallArchitectures = "native";
+    SystemCallErrorNumber = "EPERM"; 
   };
 }

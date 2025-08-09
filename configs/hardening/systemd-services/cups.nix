@@ -3,6 +3,7 @@
     NoNewPrivileges = true;
     ProtectSystem = "full";
     ProtectHome = true;
+    PrivateTMP = true;
     ProtectKernelModules = true;
     ProtectKernelTunables = true; 
     ProtectKernelLogs = true;
