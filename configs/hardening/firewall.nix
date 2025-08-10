@@ -34,6 +34,7 @@
     ];
     allowedUDPPorts = [
       53 # DNS
+      51820 # Wireguard
     ];
 
     #KDE Connect

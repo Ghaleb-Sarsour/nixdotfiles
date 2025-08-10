@@ -11,7 +11,7 @@
     ./systemd-services/dbus.nix
     ./systemd-services/getty.nix
     ./systemd-services/libvertd.nix
-    ./systemd-services/nix-daemon.nix
+    # ./systemd-services/nix-daemon.nix
     ./systemd-services/nix-optimise.nix
     ./systemd-services/reload-systemd-vconsole-setup.nix
     ./systemd-services/rescue.nix
@@ -21,12 +21,12 @@
     ./systemd-services/systemd-ask-password-wall.nix
     ./systemd-services/systemd-journald.nix
     ./systemd-services/systemd-machined.nix
-    ./systemd-services/user.nix
     ./systemd-services/fail2ban.nix
     ./systemd-services/systemd-udevd.nix
     ./systemd-services/emergency.nix
     ./systemd-services/throttled.nix
-    ./systemd-services/display-manager.nix
+    # ./systemd-services/display-manager.nix
+    # ./systemd-services/user.nix
   ];
 
   #Disabled Services

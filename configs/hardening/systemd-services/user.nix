@@ -1,43 +1,27 @@
 {
   systemd.services."user@".serviceConfig = {
-    NoNewPrivileges = true;
-
-    LockPersonality = true; 
-    ProtectControlGroups = true;
-    ProcSubset = "pid"; 
-    PrivateMounts = true; 
-    ProtectHome = true;
- 
     ProtectSystem = "strict";
-    ProtectClock = true; 
-    ProtectHostname = true;
+    ProtectHome = true;
     ProtectKernelTunables = true;
     ProtectKernelModules = true;
+    ProtectControlGroups = true;
     ProtectKernelLogs = true;
+    ProtectClock = true;
     ProtectProc = "invisible";
+    ProcSubset = "pid";
     PrivateTmp = true;
-    PrivateNetwork = false;
+    PrivateDevices = true;
+    PrivateIPC = true;
     MemoryDenyWriteExecute = true;
-    RestrictAddressFamilies = [ 
-      "AF_UNIX" 
-      "AF_NETLINK"
-      "AF_BLUETOOTH"
-      "AF_INET"
-    ];
-    RestrictNamespaces = true;
+    NoNewPrivileges = true;
+    LockPersonality = true;
     RestrictRealtime = true;
     RestrictSUIDSGID = true;
-    SystemCallFilter = [
-      "~@keyring"
-      "~@swap"
-      "~@debug"
-      "~@module"
-      "~@obsolete" 
-      "~@cpu-emulation" 
-      "~@mount"
-      "~@reboot"
-    ];
+    RestrictAddressFamilies = "AF_INET AF_INET6";
+    RestrictNamespaces = true;
+    SystemCallFilter = [ "@system-service" ];  # Adjust based on user needs
     SystemCallArchitectures = "native";
-    SystemCallErrorNumber = "EPERM"; 
+    UMask = "0077";
+    IPAddressDeny = "any";
   };
 }

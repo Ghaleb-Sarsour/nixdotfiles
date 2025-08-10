@@ -12,6 +12,7 @@
       ./configs/programs.nix
       ./configs/networking.nix
       ./configs/battery.nix
+      ./configs/wireguard.nix
       # ./configs/vm.nix
       ./configs/hardening/kernel.nix
       ./configs/hardening/systemd.nix
