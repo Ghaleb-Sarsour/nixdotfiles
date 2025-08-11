@@ -2,7 +2,7 @@
 
 {
   networking.nftables = {
-    enable = true;
+    enable = false;
 
     ruleset = ''
       table inet filter {

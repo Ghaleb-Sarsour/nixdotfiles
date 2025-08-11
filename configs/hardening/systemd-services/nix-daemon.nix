@@ -50,7 +50,6 @@
       "~@clock"
       "~@raw-io"
     ];
-    # LockPersonality = true;
     MemoryDenyWriteExecute = true;
     DevicePolicy = "closed";
     UMask = 0077;

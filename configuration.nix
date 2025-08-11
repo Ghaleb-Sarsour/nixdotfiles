@@ -9,10 +9,9 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./configs/programs.nix
+      ./configs/packages.nix
       ./configs/networking.nix
       ./configs/battery.nix
-      ./configs/wireguard.nix
       # ./configs/vm.nix
       ./configs/hardening/kernel.nix
       ./configs/hardening/systemd.nix
@@ -22,7 +21,8 @@
       ./configs/hardening/firewall.nix
     ];
    
-  
+  boot.kernel.sysctl = { "kernel.printk" = "3 4 1 3"; };  
+
   #Enable Usbguard
   custom.security.usbguard.enable = true;  
 

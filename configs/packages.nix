@@ -6,7 +6,13 @@
     #Unstable Programs
     (with pkgs; [
 
+      #Customization
       nwg-look
+      python313Packages.dbus-python
+      python312Packages.dbus-python
+
+      #VPN
+      wireguard-tools
 
       # Performance/Undervolting
       s-tui

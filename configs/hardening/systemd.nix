@@ -11,7 +11,7 @@
     ./systemd-services/dbus.nix
     ./systemd-services/getty.nix
     ./systemd-services/libvertd.nix
-    # ./systemd-services/nix-daemon.nix
+    ./systemd-services/nix-daemon.nix
     ./systemd-services/nix-optimise.nix
     ./systemd-services/reload-systemd-vconsole-setup.nix
     ./systemd-services/rescue.nix
